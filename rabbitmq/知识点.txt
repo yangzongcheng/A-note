@@ -1,0 +1,5 @@
+
+
+Exchange 交换器
+Connection socket连接
+Queue  队列

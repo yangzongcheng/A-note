@@ -1,0 +1,21 @@
+linux查看并发连接数：
+netstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}'
+
+centos 查看对外开放端口
+netstat -anp
+
+
+
+
+查看端口进程 lsof -i:4443
+查看发行版本号 lsb_release -a
+查看32/64位 uname -a
+
+
+查看开放的端口 iptables-save
+查看监听的端口 netstat -tlunp
+添加开放端口
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+firewall-cmd --reload
+
+

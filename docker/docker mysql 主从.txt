@@ -1,0 +1,27 @@
+1、创建主从两个容器
+docker run -d --name mysql-master -p 3307:3306 -e MYSQL_ROOT_PASSWORD=root mysql   主
+docker run -d --name mysql-slave -p 3308:3306 -e MYSQL_ROOT_PASSWORD=root mysql    从
+
+
+2、修改主从配置
+
+主：
+[mysqld]
+log-bin=mysql-log
+server-id=1
+
+Show master status;//查看主 状态
+
+从
+[mysqld]
+log-bin=mysql-log
+server-id=2
+
+
+
+
+
+
+
+3、打开从库MySQL会话，执行同步sql语句,同步master账号信息
+CHANGE MASTER TO MASTER_HOST='172.17.0.2', MASTER_USER ='root', MASTER_PASSWORD='123456' ,MASTER_LOG_FILE='mysql-bin.000001' ,MASTER_LOG_POS=1116;

@@ -1,0 +1,32 @@
+1.运行安装 mysql5.7容器
+docker run --name mysql5.7 -p 3308:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7
+-p 3306:3306 ：映射容器服务的 3306 端口到宿主机的 3308 端口，外部主机可以直接通过 宿主机ip:3308 访问到 MySQL 的服务。
+-d 指定镜像   镜像名:tag
+--name 容器名称自定义
+
+
+2.进入容器
+docker exec -it mysql5.7  bash         进入容器mysql5.7 为容器names
+
+mysql -uroot -p 进入mysql
+
+
+
+
+//允许其他访问
+
+update user set authentication_string = password('root') where user = 'root';
+
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root' WITH GRANT OPTION;
+
+FLUSH PRIVILEGES;
+
+
+
+宿主 只能通过宿主的ip 访问
+
+
+    echo "deb http://mirrors.163.com/debian/ jessie main non-free contrib" >> /etc/apt/sources.list
+    echo "deb http://mirrors.163.com/debian/ jessie-proposed-updates main non-free contrib" >>/etc/apt/sources.list
+    echo "deb-src http://mirrors.163.com/debian/ jessie main non-free contrib" >>/etc/apt/sources.list
+    echo "deb-src http://mirrors.163.com/debian/ jessie-proposed-updates main non-free contrib" >>/etc/apt/sources.list

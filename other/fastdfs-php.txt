@@ -1,0 +1,42 @@
+FastDfs php扩展安装文档
+
+建议走http 服务，走php扩展会更慢
+
+1.Git下载 fastdfs   Libfastcommon 
+		git:https://github.com/happyfish100
+
+
+2.
+		cd Libfastcommon 
+		sh ./make.sh   && sh./make.sh install
+
+3.   cd fastdfs
+sh ./make.sh   && sh ./make.sh  install
+
+
+4.cd fastdfs/php_client
+   phpize
+  ./configure --with-php-config=/www/server/php/72/bin/php-config (根 据服务器php安装路径为准)
+make && make install
+
+执行完上一步结果：扩展文件生成成功
+
+
+
+5. 将扩展加载到php.ini
+在fastdfs/php_client 目录下执行
+cat fastdfs_client.ini >> /www/server/php/72/etc/php.ini
+
+6.到  /etc/fdfs/ 目录
+ cd /etc/fdfs/
+ mv client.conf.sample client.conf
+ mv storage_ids.conf.sample storage_ids.conf
+
+7.修改配置ip
+vim client.conf
+tracker_server = 132.232.122.151:22122
+
+
+8.重启 php-fpm
+Service php-fpm restart
+

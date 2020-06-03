@@ -1,0 +1,10 @@
+
+创建内部网络
+docker  network create  --subnet=192.168.2.0/24  swoftNetwork(别名)
+
+
+
+docker run --name mysql5.7-test  -p 3308:3306  --net mynet --ip 192.168.2.2  -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7
+
+
+指定容器ip只能 通过内网 使用

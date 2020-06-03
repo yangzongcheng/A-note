@@ -1,0 +1,13 @@
+客户端访问
+http://localhost:15672/
+guest  guest
+
+启动RabbitMQ
+
+brew services start rabbitmq
+
+前台运行    rabbitmq-server
+后台运行    brew service start rabbitmq
+后台运行    rabbitmq-server -detached
+查看状态    rabbitmqctl status
+关闭        rabbitmqctl stop
