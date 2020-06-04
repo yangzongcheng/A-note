@@ -3,10 +3,12 @@
  * @param $data
  * 打印
  */
-function dd($data){
-    echo "<pre>".print_r($data,true);
+function dd($data)
+{
+    echo "<pre>" . print_r($data, true);
 }
-$redis  = new redis();
+
+$redis = new redis();
 $result = $redis->connect('127.0.0.1', 6379);
 if ($result !== true) {
     echo "连接redis失败!";

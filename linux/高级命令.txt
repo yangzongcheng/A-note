@@ -5,6 +5,9 @@ centos 查看对外开放端口
 netstat -anp
 
 
+nload 流量监控
+
+
 
 
 查看端口进程 lsof -i:4443
@@ -17,5 +20,6 @@ netstat -anp
 添加开放端口
 firewall-cmd --zone=public --add-port=80/tcp --permanent
 firewall-cmd --reload
+
 
 
