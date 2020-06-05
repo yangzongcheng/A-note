@@ -6,12 +6,8 @@ Queue  队列
 
 
 建议使用php-amqplib/php-amqplib  不用安装扩展
+composer
 {
-  "autoload":{
-    "psr-4":{
-      "Elastic\\":"appli/elastic"
-    }
-  },
   "require": {
     "php-amqplib/php-amqplib": "2.7.*"
   }
