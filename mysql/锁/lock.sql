@@ -1,4 +1,3 @@
-
 Lock TABLE t_user;
 
 SELECT * from t_user  where  id >1 FOR UPDATE ;
