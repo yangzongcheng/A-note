@@ -1,4 +1,7 @@
 
+
+
+
 创建三个php容器 指定网络
 
 docker run --name php71  -v /Users/yangzc/www/phpDocker/app1:/www  -p 9020:9000 --net mynet --ip 192.168.2.2 -d  php:7.1.30-fpm

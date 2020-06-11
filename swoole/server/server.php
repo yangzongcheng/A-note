@@ -9,7 +9,7 @@ $serv->on('Connect', function ($serv, $fd) {
 
 //监听数据接收事件
 $serv->on('Receive', function ($serv, $fd, $from_id, $data) {
-    echo '接收：'.$data.'----'.date('Y-m-d H:i:s');
+    echo '接收：'.$data.'----'.date('Y-m-d H:i:s')."\n\n\n";
     $serv->send($fd, "Server: ".$data.date('Y-m-d H:i:s'));
 });
 
