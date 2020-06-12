@@ -7,6 +7,7 @@ INSERT INTO t_user VALUE(null,'李四');
 
 
 -- MyISAM存储引擎只支持表锁
+
 -- 针对 MyISAM
 lock tables t_order read; -- 读锁 只能查询 不能insert  update delete
 -- 如果表被加上了读锁 执行写操作会提示错误

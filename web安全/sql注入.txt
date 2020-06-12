@@ -1,0 +1,22 @@
+概念：所谓SQL注入，就是通过把SQL命令插入到Web表单递交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。
+
+危害：
+
+1. 查询数据库中敏感信息。
+
+2. 绕过认证。
+
+3. 添加、删除、修改服务器数据。
+
+4. 拒绝服务。?id=(BENCHMARK(100000000, MD5(RAND()));
+
+防御:
+addslashes() 函数返回在预定义字符之前添加反斜杠的字符串。
+mysql_escape_string() 转义特殊字符
+
+对sql进行预处理占位符:
+    $sql = "select * from the_table where id = ? and uid = ?";
+    $st = $pdo->prepare($sql);
+
+自定义函数过滤
+根据参数做严格验证
