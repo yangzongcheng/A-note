@@ -1,0 +1,7 @@
+Swoole执行流程
+当客户端请求进入Master主进程后会被Master主线程接收到
+将读写操作的监听注册到对应的Reactor线程中，并通知Worker工作进程处理onConnect，也就是接收到连接的回调。
+客户端的数据会通知对应的Reactor线程并发送给Worker工作进程进行处理。
+如果Worker工作进程投递任务，将数据通过管道发送给Task任务进程，Task任务进程处理完后会发送给Worker工作进程。
+Worker工作进程会通知Reactor线程发送数据给客户端。
+当Worker工作进程出现异常时关闭，Manager管理进程会重新创建一个Worker工作进程，保证Worker工作进程的数量是固定的。
