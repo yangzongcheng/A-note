@@ -28,7 +28,6 @@ function createOrder1($p,$func){
         flock($file,LOCK_UN);//解锁
     }else{
         echoN('lock 请稍后再试');die;
-
     }
     //关闭文件
     fclose($file);

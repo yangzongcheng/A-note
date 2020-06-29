@@ -13,8 +13,6 @@ http://localhost:9200/_search  所有数据
 
 http://localhost:9200/t_user/_search //索引查询 t_test未索引
 
-
-
 1、使用go-mysql-elasticsearch同步mysql数据库信息到ElasticSearch
 
 下载go-mysql-elasticsearch

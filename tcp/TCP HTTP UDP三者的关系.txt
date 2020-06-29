@@ -1,0 +1,7 @@
+TCP/IP是个协议组，可分为四个层次：网络接口层、网络层、传输层和应用层。
+
+在网络层有IP协议、ICMP协议、ARP协议、RARP协议和BOOTP协议。
+
+在传输层中有TCP协议与UDP协议。
+
+在应用层有HTTP,FTP、TELNET、SMTP、DNS等协议。
