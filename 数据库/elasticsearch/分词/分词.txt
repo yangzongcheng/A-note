@@ -1,0 +1,9 @@
+Analysis，分词，是把全文本转换成一个个的单词的过程                                                
+
+anaylyzer，分词器，专门处理分词的组件，有三部分组成：                                             
+
+（1）Character filters，原始文本的预处理，通常完成HTML元素删除，替换指定字符等功能；                                                          
+
+（2）Tokenizer，分词，按照预设的规则切分文本                                                      
+
+（3）Token filter，切分后处理，例如大小写转换，删除停用词/stopwords，增加同义词
