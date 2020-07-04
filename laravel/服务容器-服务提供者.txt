@@ -9,3 +9,56 @@ boot： boot该方法在所有服务提供者被注册以后才会被调用，�
 将容器方法静态化可以使用静态的方式调用；
 门面类名必须和容器名一样
 
+
+3.容器实现
+a、Providers文件下 创建文件AdminServiceProvider.php
+
+php artisan make:provider AdminServiceProvider
+
+
+<?php
+
+namespace App\Providers;
+
+use Illuminate\Support\ServiceProvider;
+use App\Logic\Admin\UserLogic;
+
+class AdminServiceProvider extends ServiceProvider
+{
+    /**
+     * Register services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->app->singleton('UserLogic', function ($app) {
+            return new UserLogic();
+        });
+
+      }
+
+    /**
+     * Bootstrap services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+
+    }
+}
+
+b、config/app.php
+'providers' => [
+      //
+        App\Providers\AdminServiceProvider::class,
+
+    ],
+
+
+c、调用
+$api = resolve('UserLogic')->getInfo();    
+
+
+
