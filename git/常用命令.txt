@@ -34,6 +34,24 @@ pull 操作是将本地仓库和远程仓库（本地的）更新到远程的最
 如果想要更加可控一点的话推荐使用fetch + merge。
 
 
+1、一般用法
+本地创建两个分支  dev  test
+dev用来开发 
+test 用来合并开发 并推送到远端
+
+
+git checkout  dev 
+
+git checkout test
+
+git merge  dev
+
+git push origin test  推送到远端test
+
+
+
+
+
 
 
 
