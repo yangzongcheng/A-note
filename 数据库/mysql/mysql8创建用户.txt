@@ -57,3 +57,5 @@ flush privileges;
 //如果远程无法连接   使用以前的密码插件 mysql_native_password
 
 ALTER USER 'magento'@'%' IDENTIFIED WITH mysql_native_password BY 'magento';
+
+实在连不上就重启mysql试一试
