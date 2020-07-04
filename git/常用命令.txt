@@ -20,6 +20,11 @@ git push --set-upstream origin dev 本地分支推送到远程分支(远程将�
 git merge  local 合并本地分支local
 
 
+git reset --hard  回退
+
+
+
+
 
 git在本地会保存两个版本的仓库，分为本地仓库和远程仓库。
 1、本地仓库就是我们平时 add、commit 的那个仓库。

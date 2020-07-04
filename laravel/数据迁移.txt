@@ -5,5 +5,7 @@ php artisan make:migration create_users_table
 新增字段（user_banks 为表名）
 php artisan make:migration add_some_feild_to_user_banks --table=user_banks
 
+新增字段修改等都要重新创建数据迁移文件
+
 
 
