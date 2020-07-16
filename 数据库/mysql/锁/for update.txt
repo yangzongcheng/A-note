@@ -1,0 +1,14 @@
+InnoDB 悲观锁实现
+
+需要事务支持
+
+start transaction;
+select * from h_wap where id = 1 for update;
+
+commit;
+
+
+//上面的事务  提交之前 以下执行会被阻塞
+select * from h_wap where id = 1 for update;
+
+
