@@ -23,6 +23,9 @@ set autocommit=0;
 操作时根据获取的版本号和当前版本号对比
 相等则更新且版本号加1，不相等执行错误。
 
+v版本号
+update t_order set status=1,version=v+1 where id = 1  and version = v
+
 
 悲观锁 和 乐观锁的区别：
 

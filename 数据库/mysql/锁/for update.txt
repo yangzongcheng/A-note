@@ -1,14 +1,20 @@
-InnoDB 悲观锁实现
+InnoDB 悲观锁实现  独占锁  排它锁
 
 需要事务支持
 
 start transaction;
-select * from h_wap where id = 1 for update;
+select * from h_wap where id = 1 for update;//sql 必须包含索引
 
 commit;
 
 
 //上面的事务  提交之前 以下执行会被阻塞
 select * from h_wap where id = 1 for update;
+
+select * from h_wap where id = 1 ;//不会阻塞
+
+update h_wap  set  a =1 where id =1 //会阻塞排队 
+
+
 
 
