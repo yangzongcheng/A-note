@@ -1,0 +1,31 @@
+
+Lua 嵌入 Redis 优势: 
+
+减少网络开销: 不使用 Lua 的代码需要向 Redis 发送多次请求, 而脚本只需一次即可, 减少网络传输;
+原子操作: Redis 将整个脚本作为一个原子执行, 无需担心并发, 也就无需事务;
+复用: 脚本会永久保存 Redis 中, 其他客户端可继续使用.
+
+
+使用:
+
+1.在php的redis中使用lua
+
+    $redis->eval()函数
+
+    eval($lua,$data,$num);
+
+    $lua 要执行的lua命令 :
+
+    $data传进去的参数(必须是数组):
+
+    $num表示第二个参数数组中 有几个是参数(数组其他剩下来的是附加参数) 
+
+    其中 lua中使用参数用的是 KEYS[1]  KEYS[2]  使用附加参数是 ARGV[1] 
+
+  例1: 
+
+$lua = <<<eof
+        local msg = 'hello, world';
+        return msg;
+eof;
+$redis->eval($lua);
