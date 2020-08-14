@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a347ef14-dc50-41f7-87e2-6dd66f7010d0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/分布式解决方案/lock.php" beforeDir="false" afterPath="$PROJECT_DIR$/分布式解决方案/lock.php" afterDir="false" />
-    </list>
+    <list default="true" id="a347ef14-dc50-41f7-87e2-6dd66f7010d0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,35 +12,7 @@
     <pharConfigPath>$PROJECT_DIR$/app/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/分布式解决方案/分布式事务实现？.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/分布式解决方案/php实现分布式锁.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/分布式解决方案/lock.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -75,6 +45,7 @@
       </list>
     </option>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers />
   </component>
@@ -102,11 +73,6 @@
             <path>
               <item name="A-note" type="b2602c69:ProjectViewProjectNode" />
               <item name="A-note" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="A-note" type="b2602c69:ProjectViewProjectNode" />
-              <item name="A-note" type="462c0819:PsiDirectoryNode" />
-              <item name="分布式解决方案" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -157,7 +123,7 @@
       <option name="presentableId" value="Default" />
       <updated>1595771081656</updated>
       <workItem from="1595771082861" duration="6164000" />
-      <workItem from="1595782144431" duration="2503000" />
+      <workItem from="1595782144431" duration="3036000" />
     </task>
     <task id="LOCAL-00001" summary="qweq">
       <created>1595784682052</created>
@@ -166,11 +132,18 @@
       <option name="project" value="LOCAL" />
       <updated>1595784682052</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="qweq2020年07月27日01:33:55">
+      <created>1595784840376</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1595784840376</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8667000" />
+    <option name="totallyTimeSpent" value="9200000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -183,9 +156,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1642" height="947" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.195625" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.195625" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -197,8 +169,8 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32982457" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3871345" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32982457" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3871345" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -211,7 +183,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="qweq" />
-    <option name="LAST_COMMIT_MESSAGE" value="qweq" />
+    <MESSAGE value="qweq2020年07月27日01:33:55" />
+    <option name="LAST_COMMIT_MESSAGE" value="qweq2020年07月27日01:33:55" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.php" />
@@ -272,10 +245,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/git/常用命令.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/分布式解决方案/lock.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        <state relative-caret-position="735">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
         </state>
       </provider>
     </entry>
