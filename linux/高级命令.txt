@@ -8,7 +8,7 @@ netstat -anp
 nload 流量监控
 
 
-
+cat /proc/version  查看系统信息 显示 centos 还是  ubuntu
 
 查看端口进程 lsof -i:4443
 查看发行版本号 lsb_release -a
