@@ -1,0 +1,15 @@
+Install the latest Weekly version: brew install jenkins
+Install a specific Weekly version: brew install jenkins@YOUR_VERSION  安装特定版本
+Start the Jenkins service: brew services start jenkins
+Restart the Jenkins service: brew services restart jenkins
+Update the Jenkins version: brew upgrade jenkins
+
+
+jenkins 启动命令
+
+管理员
+admin
+yangzc123
+yangzongcheng
+
+http://localhost:8080/

@@ -1,0 +1,39 @@
+方法1：
+规格 存json  
+如：
+[
+	{
+		"重量": "1kg"
+	},
+	{
+		"颜色": "黑色"
+	}
+]
+
+table:
+id  gid   item(json)  sock(库存)
+缺点:无法拓展 检索困难
+
+方法2:
+
+	规格属性表	spec_attr(如：大小)
+		id          商品规格-属性名
+		attr_name   属性名
+		time        时间搓
+		
+	规格属性值表	spec_val
+	    id          商品规格-属性值
+	    attr_id     属性id
+	    attr_name   属性名(大小)
+	    attr_value  属性值(大、中、小)
+
+    商品对应的规格属性表： market_spec
+        goods_id    商品id
+        spec_str    商品规格组合 根据属性值进行组合 例子：9_7_3_
+        stock       库存
+        price       价格
+        image       规格展示图
+        time        时间搓
+
+
+逻辑：将所有的sku组合返回给前端  前端根据选择匹配到对应的sku_id  后端通过sku_id 就可以得到sku 信息
