@@ -1,0 +1,3 @@
+#!/bin/bash
+src=$PWD #将当前路径赋值src变量
+echo $src
