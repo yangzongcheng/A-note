@@ -20,5 +20,9 @@ firewall-cmd --reload
 
 ps aux |grep 8080
 
+top -p pid  查看某个进程的cup占比
+
+ strace -p 17535  进程追踪
+
 
 

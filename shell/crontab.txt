@@ -1,6 +1,8 @@
 * * * * *
 分 时 号 月 周
 
+cat /etc/crontab  查看规则
+
 #每天凌晨执行
 00 0 * * * /www/web/dev/xingzuo/crontab/xingzuo/luck_day.sh >>/www/web/dev/xingzuo/runtime/crontab/xingzuo-luck.log
 #每周一凌晨执行
