@@ -6,3 +6,5 @@ echo $src
 #日期赋值变量 注意需要加上``符号
 date=`date "+%Y-%m-%d %H:%M:%S"`
 echo "时间日期:"$date
+
+source ./com.sh 引入文件 可以调用引入文件内的变量
