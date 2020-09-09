@@ -1,3 +1,8 @@
 #!/bin/bash
 src=$PWD #将当前路径赋值src变量
 echo $src
+
+
+#日期赋值变量 注意需要加上``符号
+date=`date "+%Y-%m-%d %H:%M:%S"`
+echo "时间日期:"$date

@@ -22,7 +22,10 @@ ps aux |grep 8080
 
 top -p pid  查看某个进程的cup占比
 
- strace -p 17535  进程追踪
+strace -p 17535  进程追踪
+
+tree dir 目录树形结构展示
+pstree -p pid
 
 
 

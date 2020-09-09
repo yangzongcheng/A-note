@@ -32,6 +32,13 @@ docker rmi -f 镜像名:tag
 docker start 容器id     启动容器
 docker stop 容器id     停止容器
 
+容器内安装软件：
+yum install vim
+
+apt-get install 
+
+apk add vim
+
 
 
 
