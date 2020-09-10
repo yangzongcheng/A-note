@@ -14,3 +14,9 @@ cat /etc/crontab  查看规则
 
 #每分钟执行
 */1 * * * * 
+
+#每小时
+00 */1 * * *
+
+
+service  crond restart
