@@ -13,10 +13,8 @@ cat /proc/version  查看系统信息 显示 centos 还是  ubuntu
 查看32/64位 uname -a
 
 查看开放的端口 iptables-save
-查看监听的端口 netstat -tlunp
-添加开放端口
-firewall-cmd --zone=public --add-port=80/tcp --permanent
-firewall-cmd --reload
+查看被监听的端口 netstat -tlunp
+
 
 ps aux |grep 8080
 
@@ -28,6 +26,10 @@ dtruss -p pid mac使用这个命令
 
 tree dir 目录树形结构展示
 pstree -p pid
+
+lsof  -i tcp #列出所有tcp网络连接
+lsof  -i udp #列出所有udp网络连接信息
+lsof -i :8080 #列出使用8080端口信息
 
 
 
