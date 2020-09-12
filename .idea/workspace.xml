@@ -20,10 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a347ef14-dc50-41f7-87e2-6dd66f7010d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docker/dockerhub.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/A-note.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/A-note.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/数据库/redis/redis主从实现.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/知识点.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/知识点.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/高级命令.txt" beforeDir="false" afterPath="$PROJECT_DIR$/linux/高级命令.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/分布式解决方案/lock.php" beforeDir="false" afterPath="$PROJECT_DIR$/分布式解决方案/lock.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/分布式解决方案/ok.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据库/redis/Lua 嵌入 Redis .txt" beforeDir="false" afterPath="$PROJECT_DIR$/数据库/redis/Lua 嵌入 Redis .txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,13 +35,6 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/app/composer.json</pharConfigPath>
     <execution />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>1595784450563856348906711636755</find>
-      <find>排队159578445080831217806067792334</find>
-      <find>排队159578453580021243874609942140</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -103,6 +98,7 @@
       <workItem from="1597426527984" duration="236000" />
       <workItem from="1597428722823" duration="1731000" />
       <workItem from="1597475728140" duration="635000" />
+      <workItem from="1599891223806" duration="8066000" />
     </task>
     <task id="LOCAL-00001" summary="qweq">
       <created>1595784682052</created>
@@ -149,6 +145,12 @@
     <MESSAGE value="qweq" />
     <MESSAGE value="qweq2020年07月27日01:33:55" />
     <option name="LAST_COMMIT_MESSAGE" value="qweq2020年07月27日01:33:55" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="645" y="413" key="NewPhpFileDialog" timestamp="1599891309367">
+      <screen x="0" y="23" width="1680" height="929" />
+    </state>
+    <state x="645" y="413" key="NewPhpFileDialog/0.23.1680.929@0.23.1680.929" timestamp="1599891309367" />
   </component>
   <component name="masterDetails">
     <states>

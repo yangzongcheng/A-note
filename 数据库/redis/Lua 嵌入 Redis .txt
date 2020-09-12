@@ -6,6 +6,13 @@ Lua 嵌入 Redis 优势:
 复用: 脚本会永久保存 Redis 中, 其他客户端可继续使用.
 
 
+
+Redis 使用单个 Lua 解释器去运行所有脚本，并且， Redis 也保证脚本会以原子性 (atomic) 的方式执
+行：当某个脚本正在运行的时候，不会有其他脚本或 Redis 命令被执行。这和使用 MULTI / EXEC 包
+围的事务很类似。在其他别的客户端看来，脚本的效果 (effect) 要么是不可见的 (not visible) ，要么就是
+已完成的 (already completed) 。
+
+
 使用:
 
 1.在php的redis中使用lua
