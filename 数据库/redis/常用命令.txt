@@ -8,3 +8,8 @@ TTL mykey
 
 Redis Expire 命令用于设置 key 的过期时间，key 过期后将不再可用。单位以秒计。
 EXPIRE runooobkey 60
+
+
+mset k1 v1 k2 v2 同时设置多个key
+
+

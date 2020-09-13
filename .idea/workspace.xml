@@ -20,9 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a347ef14-dc50-41f7-87e2-6dd66f7010d0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/git/Git的分支你们是怎么管理的？.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/问答/hash一致性.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/问答/问.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/问答/项目中遇到的难题.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/数据库/redis/sub/分布式锁.txt" beforeDir="false" afterPath="$PROJECT_DIR$/数据库/redis/redis消息队列实现.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/数据库/redis/持久化.txt" beforeDir="false" afterPath="$PROJECT_DIR$/数据库/redis/持久化.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据库/redis/redis 事务.txt" beforeDir="false" afterPath="$PROJECT_DIR$/数据库/redis/redis 事务.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据库/redis/常用命令.txt" beforeDir="false" afterPath="$PROJECT_DIR$/数据库/redis/常用命令.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,12 +75,13 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/分布式解决方案" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/分布式解决方案" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/问答" />
+      <recent name="$PROJECT_DIR$/分布式解决方案" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -97,7 +102,7 @@
       <workItem from="1597475728140" duration="635000" />
       <workItem from="1599891223806" duration="11644000" />
       <workItem from="1599937561452" duration="326000" />
-      <workItem from="1599991713986" duration="4032000" />
+      <workItem from="1599991713986" duration="6089000" />
     </task>
     <task id="LOCAL-00001" summary="qweq">
       <created>1595784682052</created>
@@ -146,6 +151,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="qweq2020年07月27日01:33:55" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="621" y="292" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600017660944">
+      <screen x="0" y="23" width="1680" height="934" />
+    </state>
+    <state x="621" y="292" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.934@0.23.1680.934" timestamp="1600017660944" />
     <state x="645" y="416" key="NewPhpFileDialog" timestamp="1599928898364">
       <screen x="0" y="23" width="1680" height="937" />
     </state>
