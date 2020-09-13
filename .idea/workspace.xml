@@ -20,9 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a347ef14-dc50-41f7-87e2-6dd66f7010d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/数据库/mysql/mysql分表.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/数据库/redis/redis主从实现.txt" beforeDir="false" afterPath="$PROJECT_DIR$/数据库/redis/redis主从实现.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据库/redis/sub/分布式锁.txt" beforeDir="false" afterPath="$PROJECT_DIR$/数据库/redis/redis消息队列实现.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据库/redis/持久化.txt" beforeDir="false" afterPath="$PROJECT_DIR$/数据库/redis/持久化.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +68,7 @@
     <property name="nodejs.protractor.protractor_package" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -95,7 +95,9 @@
       <workItem from="1597426527984" duration="236000" />
       <workItem from="1597428722823" duration="1731000" />
       <workItem from="1597475728140" duration="635000" />
-      <workItem from="1599891223806" duration="11538000" />
+      <workItem from="1599891223806" duration="11644000" />
+      <workItem from="1599937561452" duration="326000" />
+      <workItem from="1599991713986" duration="4032000" />
     </task>
     <task id="LOCAL-00001" summary="qweq">
       <created>1595784682052</created>
@@ -149,6 +151,14 @@
     </state>
     <state x="645" y="413" key="NewPhpFileDialog/0.23.1680.929@0.23.1680.929" timestamp="1599891309367" />
     <state x="645" y="416" key="NewPhpFileDialog/0.23.1680.937@0.23.1680.937" timestamp="1599928898364" />
+    <state x="383" y="122" key="SettingsEditor" timestamp="1599937905154">
+      <screen x="0" y="23" width="1680" height="929" />
+    </state>
+    <state x="383" y="122" key="SettingsEditor/0.23.1680.929@0.23.1680.929" timestamp="1599937905154" />
+    <state x="587" y="364" width="644" height="271" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1599937904284">
+      <screen x="0" y="23" width="1680" height="929" />
+    </state>
+    <state x="587" y="364" width="644" height="271" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.23.1680.929@0.23.1680.929" timestamp="1599937904284" />
   </component>
   <component name="masterDetails">
     <states>
