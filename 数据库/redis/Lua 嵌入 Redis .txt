@@ -1,5 +1,4 @@
-
-Lua 嵌入 Redis 优势: 
+Lua 嵌入 Redis 优势:
 
 减少网络开销: 不使用 Lua 的代码需要向 Redis 发送多次请求, 而脚本只需一次即可, 减少网络传输;
 原子操作: Redis 将整个脚本作为一个原子执行, 无需担心并发, 也就无需事务;
@@ -29,10 +28,18 @@ Redis 使用单个 Lua 解释器去运行所有脚本，并且， Redis 也保�
 
     其中 lua中使用参数用的是 KEYS[1]  KEYS[2]  使用附加参数是 ARGV[1] 
 
-  例1: 
+  例1:
+
+  redis.call('set',KEYS[1],ARGV[1])
 
 $lua = <<<eof
         local msg = 'hello, world';
         return msg;
 eof;
 $redis->eval($lua);
+
+如：在lua脚本中set key
+eval "redis.call('set',KEYS[1],KEYS[2],ARGV[1],ARGV[2])" 2 a b  aa bb
+
+
+
