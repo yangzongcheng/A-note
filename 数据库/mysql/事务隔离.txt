@@ -1,5 +1,7 @@
 MySQL的四种事务隔离级别
 
+查看当前数据库的隔离级别
+select @@tx_isolation;
 
 一、事务的基本要素（ACID）
 

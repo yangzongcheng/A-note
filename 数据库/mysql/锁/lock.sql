@@ -1,7 +1,7 @@
 Lock TABLE t_user;
 
 SELECT * from t_user  where  id >1 FOR UPDATE ;
-UPDATE t_user set name='kk' where id = 2
+UPDATE t_user set name='kk' where id = 2;
 
 INSERT INTO t_user VALUE(null,'李四');
 
@@ -15,7 +15,7 @@ select * from t_order;
 
 INSERT INTO t_order VALUE(null,300);
 DELETE from t_order where id=1;
-UPDATE t_order set uid=20 where id = 2
+UPDATE t_order set uid=20 where id = 2;
 UNLOCK tables;-- 解锁
 
 lock tables t_order WRITE; -- 写锁  其他会话不能执行select insert  update delete

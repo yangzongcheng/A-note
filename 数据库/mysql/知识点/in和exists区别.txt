@@ -4,7 +4,6 @@
 
 SELECT * FROM `user`
     WHERE id in (SELECT user_id FROM `order`)
-那么！in和exists到底有啥区别那，要什么时候用in，什么时候用exists那？接下来阿北一一教你。
-
-我们先记住口诀再说细节！“外层查询表小于子查询表，则用exists，外层查询表大于子查询表，则用in，如果外层和子查询表差不多，则爱用哪个用哪个。”
+那么！in和exists到底有啥区别那，要什么时候用in，什么时候用exists那？
+“外层查询表小于子查询表，则用exists，外层查询表大于子查询表，则用in，如果外层和子查询表差不多，则爱用哪个用哪个。”
 
