@@ -4,7 +4,7 @@ InnoDB:
 2、Innodb不支持全文索引，如果一定要用的话，最好使用sphinx等搜索引擎
 3、InnoDB支持行级锁，InnoDB表的行锁也不是绝对的，如果在执行一个SQL语句时MySQL不能确定要扫描的范围，InnoDB表同样会锁全表
 4、InnoDB（索引组织表）使用的聚簇索引、索引就是数据，顺序存储，因此能缓存索引，也能缓存数据
-5、 InnoDB 支持外键
+5、InnoDB 支持外键
 
 
 MyISAM:
