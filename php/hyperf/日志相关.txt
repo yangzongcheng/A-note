@@ -1,0 +1,35 @@
+配置文件:
+project/config.php
+return [
+StdoutLoggerInterface::class => [
+     // 此配置时为了控制 终端打出的日志级别，不能控制日志文件打印日志的级别
+     //终端只会打印出来开放级别的日志，如只开放了debug 则终端只会打印debug 日志
+    'log_level' => [
+        LogLevel::ALERT,
+        LogLevel::CRITICAL,
+        LogLevel::ERROR,
+        LogLevel::EMERGENCY,
+        LogLevel::INFO,
+        LogLevel::DEBUG,
+        LogLevel::NOTICE,
+        LogLevel::WARNING,
+    ],
+]
+];
+
+
+配置文件:
+project/config/autoload/logger.php
+
+'handler' => [
+    //按照日期轮转
+    'class' =>  Monolog\Handler\RotatingFileHandler::class,
+    'constructor' => [
+        'filename' => BASE_PATH . '/runtime/logs/log/hyperf.log',
+        'level' => \Monolog\Logger::INFO,//此处配置日志文件打印级别
+    ],
+]
+
+
+
+
