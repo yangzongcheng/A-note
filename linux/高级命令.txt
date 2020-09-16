@@ -36,5 +36,7 @@ ss -t -a 查看tcp连接
 
 ulimit -n 最大连接数
 
+lscpu 查看cup信息
+
 
 
