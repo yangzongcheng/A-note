@@ -7,7 +7,7 @@ echo $src
 date=`date "+%Y-%m-%d %H:%M:%S"`
 echo "时间日期:"$date
 
-source ./com.sh 引入文件 可以调用引入文件内的变量 建议使用绝对路径  相对路径会收使用目录的影响
+source ./com.sh 引入文件 可以调用引入文件内的变量 建议使用绝对路径  相对路径会受使用目录的影响
  
 echo -echo "\n\n\n" 换行符
 
