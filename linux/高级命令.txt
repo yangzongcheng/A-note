@@ -4,6 +4,9 @@ netstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}'
 centos 查看对外开放端口
 netstat -anp
 
+查看80端口连接数
+netstat -nat | grep -i "80" | wc -l
+
 nload 流量监控
 
 cat /proc/version  查看系统信息 显示 centos 还是  ubuntu
@@ -37,6 +40,16 @@ ss -t -a 查看tcp连接
 ulimit -n 最大连接数
 
 lscpu 查看cup信息
+
+
+grep常用参数的作用及示例
+参数	作用
+-c	只显示筛选出的结果的行数，效果等同于grep xx|wc -l
+-e	筛选出包含xx或yy…的内容 grep -e xx -e yy ...
+-i	进行筛选时，忽略大小写
+-n	在筛选出的结果前面加上行号
+-v	筛选出不含xx的内容 grep -v xx
+-w	全字符精确匹配
 
 
 
