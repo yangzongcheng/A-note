@@ -6,7 +6,7 @@
 <!--3. 代码说明：-->
 
 <?php
-//简单工厂模式
+//简单工厂模式 2020年09月21日21:26:50
 class ProductA
 {
     function __construct()
