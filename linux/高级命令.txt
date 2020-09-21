@@ -41,6 +41,10 @@ ulimit -n 最大连接数
 
 lscpu 查看cup信息
 
+查看某个进程下的线程
+ps -T -p <pid>
+top -H -p <pid>
+
 
 grep常用参数的作用及示例
 参数	作用
