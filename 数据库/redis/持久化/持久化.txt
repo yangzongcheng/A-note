@@ -36,15 +36,13 @@ save 60 10000
 
 
 
-
 AOF
-
 RDB快照并不是很可靠. 如果你的电脑突然宕机了, 或者电源断了, 又或者不小心杀掉了进程, 那么最新的数据就会丢失.
 而 AOF 文件则提供了一种更为可靠的持久化方式. 每当 Redis 接受到会修改数据集的命令时, 就会把命令追加到 AOF 文件里,
 当你重启 Redis 时, AOF 里的命令会被重新执行一次, 重建数据.
 
 启用 AOF
-把配置项 appendonly 设为 yes:
+把配置项 appendonly 设为 yes:(appendonly 默认为no 改为yes就是aof)
 appendonly yes
 文件路径和名称
 
