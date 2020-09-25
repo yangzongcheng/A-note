@@ -1,1 +1,4 @@
-brew list 
+brew list
+
+软件安装目录：
+/usr/local/Cellar
