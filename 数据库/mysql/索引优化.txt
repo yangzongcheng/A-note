@@ -1,3 +1,6 @@
+
+
+
 MySQL目前主要有以下几种索引方法：B-Tree，Hash，R-Tree。
 
 一、B-Tree
@@ -22,7 +25,7 @@ R-Tree在MySQL很少使用，仅支持geometry数据类型，支持该类型的�
 
 
 
-
+mysql索引类型:
 1.普通索引
 
 2.唯一索引
@@ -39,6 +42,18 @@ R-Tree在MySQL很少使用，仅支持geometry数据类型，支持该类型的�
 ALTER TABLE `table` ADD INDEX name_city_age (name,city,age);
 
 5.全文索引
+全文索引呢,通过建立倒排索引,可以极大的提升检索效率.
+倒排索引（英语：Inverted index），也常被称为反向索引、置入档案或反向档案，是一种索引方法，
+被用来存储在全文搜索下某个单词在一个文档或者一组文档中的存储位置的映射。它是文档检索系统中最常用的数据结构。
+MySQL仅可以在char,varchar,text属性的列上建立全文索引.
+
+在MySQL 5.6版本以前,只有MyISAM存储引擎支持全文引擎.在5.6版本中,InnoDB加入了对全文索引的支持,但是不支持中文全文索引.
+在5.7.6版本,MySQL内置了ngram全文解析器,用来支持亚洲语种的分词.
+
+
+
+创建:
+ALTER TABLE articles ADD FULLTEXT INDEX title_body_index (title,body) WITH PARSER ngram;
 
 
 

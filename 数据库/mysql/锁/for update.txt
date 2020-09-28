@@ -13,7 +13,14 @@ select * from h_wap where id = 1 for update;
 
 select * from h_wap where id = 1 ;//不会阻塞
 
-update h_wap  set  a =1 where id =1 //会阻塞排队 
+update h_wap  set  a =1 where id =1 //会阻塞排队
+
+
+
+
+当for update的字段为索引或者主键的时候，只会锁住索引或者主键对应的行。
+
+而当for update的字段为普通字段的时候，Innodb会锁住整张表。
 
 
 

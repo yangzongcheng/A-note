@@ -1,0 +1,22 @@
+自动加载功能带来了几处优点：
+
+使用类之前无需 include / require
+使用类的时候才会 include / require 文件，实现了 lazy loading ，避免了 include / require 多余文件。
+无需考虑引入 类的实际磁盘地址 ，实现了逻辑和实体文件的分离。
+
+PHP 自动加载函数 __autoload()
+这个魔术方法的作用就是在调用的类如果没有加载的情况下，就进入到这个方法中。
+
+1.spl_autoload_register — 注册给定的函数作为 __autoload 的实现，
+
+spl_autoload_unregister — 注销已注册的 autoload () 函数，如果该函数队列处于激活状态，并且在给定函数注销后该队列变为空，
+则该函数队列将会变为无效。如果该函数注销后使得自动装载函数队列无效，即使存在有 autoload 函数它也不会自动激活。
+
+
+spl_autoload_register：注册__autoload()函数
+spl_autoload_unregister：注销已注册的函数
+spl_autoload_functions：返回所有已注册的函数
+spl_autoload_call：尝试所有已注册的函数来加载类
+spl_autoload ：__autoload()的默认实现
+spl_autoload_extionsions： 注册并返回spl_autoload函数使用的默认文件扩展名。
+

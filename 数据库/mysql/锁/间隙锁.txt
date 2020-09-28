@@ -1,0 +1,5 @@
+间隙锁（Gap Lock）是Innodb在\color{red}{可重复读}提交下为了解决幻读问题时引入的锁机制
+
+当for update的字段为索引或者主键的时候，只会锁住索引或者主键对应的行。
+
+而当for update的字段为普通字段的时候，Innodb会锁住整张表。
