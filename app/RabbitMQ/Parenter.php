@@ -9,10 +9,10 @@ abstract class Parenter
 {
     //MQ的默认连接配置
     public $config = array(
-        'host' => '47.113.224.36', //ip
+        'host' => '127.0.0.1', //ip
         'port' => '5672',      //端口号
-        'user' => 'admin',     //用户
-        'password' => '123456', //密码
+        'user' => 'guest',     //用户
+        'password' => 'guest', //密码
         'vhost' => '/'         //虚拟host
     );
 

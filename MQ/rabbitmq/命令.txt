@@ -7,7 +7,7 @@ guest  guest
 brew services start rabbitmq
 
 前台运行    rabbitmq-server
-后台运行    brew service start rabbitmq
+后台运行    brew services start rabbitmq
 后台运行    rabbitmq-server -detached
 查看状态    rabbitmqctl status
 关闭        rabbitmqctl stop

@@ -15,11 +15,6 @@ Producer：生产者
 生产者把消息交由RabbitMQ，RabbitMQ之后会根据标签吧消息发送给感兴趣的消费者
 
 
-
-
-
-
-
 Consumer：消费方
 
 就是接受消息一方

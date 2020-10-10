@@ -3,9 +3,6 @@ brew list
 brew services list
 
 
- brew services stop kibana
-
-
 
 软件安装目录：
 /usr/local/Cellar
