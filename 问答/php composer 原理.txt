@@ -39,6 +39,8 @@ function tests($class){
 spl_autoload_register('tests');//调用单个方法
 spl_autoload_register( array('test','loadprint') );//调用test 里的 loadprint
 //另一种写法：spl_autoload_register( "test::loadprint" );
+
+//调用一个不存在的类
 $obj = new PRINTIT();
 $obj->doPrint();
 ?>
