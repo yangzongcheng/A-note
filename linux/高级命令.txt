@@ -63,5 +63,7 @@ ln -s ./app  yy
 rm -rf ./yy
 注意:rm -rf ./yy/ 会删除目标目录文件
 
+awk 日志分析
+
 
 
