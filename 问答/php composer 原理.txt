@@ -20,3 +20,26 @@ spl_autoload_call：尝试所有已注册的函数来加载类
 spl_autoload ：__autoload()的默认实现
 spl_autoload_extionsions： 注册并返回spl_autoload函数使用的默认文件扩展名。
 
+
+<?php
+class test {
+    public static function loadprint( $class ) {
+        $file = $class . '.class.php';
+        if (is_file($file)) {
+            require_once($file);
+        }else{
+            echo '不存在';
+        }
+    }
+}
+function tests($class){
+    //输出 PRINTIT
+    echo $class;
+}
+spl_autoload_register('tests');//调用单个方法
+spl_autoload_register( array('test','loadprint') );//调用test 里的 loadprint
+//另一种写法：spl_autoload_register( "test::loadprint" );
+$obj = new PRINTIT();
+$obj->doPrint();
+?>
+
