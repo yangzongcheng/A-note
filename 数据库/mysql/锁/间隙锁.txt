@@ -3,3 +3,6 @@
 当for update的字段为索引或者主键的时候，只会锁住索引或者主键对应的行。
 
 而当for update的字段为普通字段的时候，Innodb会锁住整张表。
+
+
+https://www.cnblogs.com/cjjjj/p/12828415.html
