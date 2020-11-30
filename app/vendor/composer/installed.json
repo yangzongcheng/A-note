@@ -1,5 +1,123 @@
 [
     {
+        "name": "datto/json-rpc",
+        "version": "6.1.0",
+        "version_normalized": "6.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/datto/php-json-rpc.git",
+            "reference": "ad4d735f48d80c6b53f7405e5007d97c996533f6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/datto/php-json-rpc/zipball/ad4d735f48d80c6b53f7405e5007d97c996533f6",
+            "reference": "ad4d735f48d80c6b53f7405e5007d97c996533f6",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "php": ">=7.0.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^6.5"
+        },
+        "time": "2020-02-28T23:54:06+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Datto\\JsonRpc\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0+"
+        ],
+        "authors": [
+            {
+                "name": "Spencer Mortensen",
+                "email": "smortensen@datto.com",
+                "homepage": "http://spencermortensen.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Fully unit-tested JSON-RPC 2.0 for PHP",
+        "homepage": "http://datto.com",
+        "keywords": [
+            "json",
+            "json-rpc",
+            "jsonrpc",
+            "php",
+            "php-json-rpc",
+            "rpc"
+        ]
+    },
+    {
+        "name": "datto/json-rpc-http",
+        "version": "5.0.6",
+        "version_normalized": "5.0.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/datto/php-json-rpc-http.git",
+            "reference": "db15a075f3562c4e8d297b9082acc5b2869bd4b4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/datto/php-json-rpc-http/zipball/db15a075f3562c4e8d297b9082acc5b2869bd4b4",
+            "reference": "db15a075f3562c4e8d297b9082acc5b2869bd4b4",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "datto/json-rpc": "~6.1",
+            "php": ">=7.0.0"
+        },
+        "time": "2020-03-02T21:27:10+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Datto\\JsonRpc\\Http\\Examples\\": "examples/src",
+                "Datto\\JsonRpc\\Http\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0+"
+        ],
+        "authors": [
+            {
+                "name": "Spencer Mortensen",
+                "email": "smortensen@datto.com",
+                "homepage": "http://spencermortensen.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "HTTP client and server for JSON-RPC 2.0",
+        "homepage": "http://datto.com",
+        "keywords": [
+            "client",
+            "http",
+            "json",
+            "json-rpc",
+            "jsonrpc",
+            "php",
+            "php-json-rpc",
+            "rpc",
+            "server"
+        ]
+    },
+    {
         "name": "elasticsearch/elasticsearch",
         "version": "v7.10.0",
         "version_normalized": "7.10.0.0",

@@ -31,6 +31,12 @@ class ComposerStaticInitb9449b6dc9c512c1b9eb4da31bf3cb5d
             'Elasticsearch\\' => 14,
             'Elastic\\' => 8,
         ),
+        'D' => 
+        array (
+            'Datto\\JsonRpc\\Http\\Examples\\' => 28,
+            'Datto\\JsonRpc\\Http\\' => 19,
+            'Datto\\JsonRpc\\' => 14,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -61,6 +67,18 @@ class ComposerStaticInitb9449b6dc9c512c1b9eb4da31bf3cb5d
         'Elastic\\' => 
         array (
             0 => __DIR__ . '/../..' . '/appli/elastic',
+        ),
+        'Datto\\JsonRpc\\Http\\Examples\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/datto/json-rpc-http/examples/src',
+        ),
+        'Datto\\JsonRpc\\Http\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/datto/json-rpc-http/src',
+        ),
+        'Datto\\JsonRpc\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/datto/json-rpc/src',
         ),
     );
 

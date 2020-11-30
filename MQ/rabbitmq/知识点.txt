@@ -1,8 +1,10 @@
-Exchange 交换器
-Connection socket连接
+broker代理服务：负责服务处理管理交换机队列等
+
+Exchange 交换器：负责将消息发送到队列
+RoutingKey 路由键：负责将交换机和队列关联
 Queue  队列
 
-
+Connection socket连接
 
 
 建议使用php-amqplib/php-amqplib  不用安装扩展

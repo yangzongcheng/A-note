@@ -9,3 +9,6 @@ firewall-cmd --zone= public --query-port=80/tcp;#查看80/tcp端口
 firewall-cmd --zone= public --remove-port=80/tcp --permanent;#删除该端口开放
 
 iptables-save
+
+
+iptables -nL 查看防火墙开放端口

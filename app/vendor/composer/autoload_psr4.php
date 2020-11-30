@@ -13,4 +13,7 @@ return array(
     'GuzzleHttp\\Ring\\' => array($vendorDir . '/ezimuel/ringphp/src'),
     'Elasticsearch\\' => array($vendorDir . '/elasticsearch/elasticsearch/src/Elasticsearch'),
     'Elastic\\' => array($baseDir . '/appli/elastic'),
+    'Datto\\JsonRpc\\Http\\Examples\\' => array($vendorDir . '/datto/json-rpc-http/examples/src'),
+    'Datto\\JsonRpc\\Http\\' => array($vendorDir . '/datto/json-rpc-http/src'),
+    'Datto\\JsonRpc\\' => array($vendorDir . '/datto/json-rpc/src'),
 );
