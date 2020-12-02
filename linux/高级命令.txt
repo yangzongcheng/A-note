@@ -54,6 +54,9 @@ grep常用参数的作用及示例
 -v	筛选出不含xx的内容 grep -v xx
 -w	全字符精确匹配
 
+服务：
+chkconfig --list  查看服务列表
+
 
 
 软连接：

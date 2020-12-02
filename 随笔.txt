@@ -4,3 +4,6 @@
  awk 日志分析
  自动化部署
  mysql 备份恢复
+
+ nginx日志压缩
+ 框架runtime 日志压缩
