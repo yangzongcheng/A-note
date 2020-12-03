@@ -6,6 +6,9 @@ Queue  队列
 
 Connection socket连接
 
+Channel信道
+信道是建立在 Connection 之上的虚拟连接，RabbitMQ 处理的每条 AMQP 指令都是通过信道完成的。
+基于 NIO(非阻塞 I/O) 可以使得 Connection 的 TCP 能够被复用，减少了 TCP 连接建立的开销。
 
 建议使用php-amqplib/php-amqplib  不用安装扩展
 composer

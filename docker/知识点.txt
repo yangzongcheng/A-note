@@ -10,7 +10,7 @@ docker run --name python3.7 -p 8001:80  -v /Users/yangzc/python/app:/www/python 
 docker run -it --name php-swoole phpswoole/swoole sh  //启动swoole
 
 -v 挂载本地目录 本地目录在前
-
+-d: 后台运行容器，并返回容器ID；
 
 
 
@@ -31,6 +31,9 @@ docker rmi -f 镜像名:tag
 
 docker start 容器id     启动容器
 docker stop 容器id     停止容器
+
+docker system df 查看容器镜像所占大小
+docker system df -v  查看单个image、container 大小
 
 容器内安装软件：
 yum install vim
