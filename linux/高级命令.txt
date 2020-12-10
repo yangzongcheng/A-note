@@ -68,5 +68,11 @@ rm -rf ./yy
 
 awk 日志分析
 
+卸载yum 安 装的软件
+yum -y remove httpd
+
+多层级目录创建
+mkdir -p /opt/kubernetes/{bin,ssl,cfg,log}
+
 
 
