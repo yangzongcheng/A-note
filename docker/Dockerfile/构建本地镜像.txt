@@ -6,3 +6,8 @@ ADD ./www /var/www/html
 #打包成本地镜像
 # docker build -t jenkins-php:test-sync .
 #docker run -d  jenkins-sync-php jenkins-php:test-sync
+
+
+
+
+
