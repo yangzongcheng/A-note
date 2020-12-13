@@ -9,6 +9,7 @@ groupdel testgroup    组的删除
 
 
 cat /etc/passwd  查看所有用户
+cat /etc/group   查看用户组
 
 
 chwon -R 用户名：组 文件夹
