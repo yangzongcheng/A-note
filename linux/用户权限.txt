@@ -13,3 +13,16 @@ cat /etc/group   查看用户组
 
 
 chwon -R 用户名：组 文件夹
+
+
+linux创建并分配docker权限
+1.创建账号
+useradd ${userName}
+2.修改密码
+passwd ${userName}
+3.创建docker组
+groupadd docker
+4.将用户加入docker组
+usermod -aG docker ${userName}
+5.重启docker服务
+systemctl restart docker
