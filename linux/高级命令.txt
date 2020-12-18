@@ -25,6 +25,8 @@ top -p pid  查看某个进程的cup占比
 strace -p 17535  进程追踪
 dtruss -p pid mac使用这个命令
 
+pstack  pid 跟踪进程栈
+
 
 tree dir 目录树形结构展示
 pstree -p pid
