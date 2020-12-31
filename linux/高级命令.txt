@@ -77,4 +77,7 @@ yum -y remove httpd
 mkdir -p /opt/kubernetes/{bin,ssl,cfg,log}
 
 
+scp 向远程服务传文件
+
+
 

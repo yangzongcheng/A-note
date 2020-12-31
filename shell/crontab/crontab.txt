@@ -13,10 +13,20 @@ cat /etc/crontab  查看规则
 0 0 1 1 * /www/web/dev/xingzuo/crontab/xingzuo/luck_year.sh >>/www/web/dev/xingzuo/runtime/crontab/xingzuo-luck.log
 
 #每分钟执行
-*/1 * * * * 
+*/1 * * * *
+
+每一分钟执行一次 /bin/ls：
+* * * * * /bin/ls
 
 #每小时
 00 */1 * * *
 
+每月一号凌晨执行
+0 0 1 * *
+
 
 service  crond restart
+
+
+在线表达式：
+https://tool.lu/crontab/
