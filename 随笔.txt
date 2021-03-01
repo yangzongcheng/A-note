@@ -7,3 +7,6 @@
 
  nginx日志压缩
  框架runtime 日志压缩
+
+
+自己搭架子推荐  gin 路由+ gorm ORM + viper(配置文件管理), 日志是否需要组件看情况

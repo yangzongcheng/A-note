@@ -1,0 +1,7 @@
+1.从远程服务器下载
+
+scp username@servername:/path/filename /tmp/local_destination
+
+2.上传到远程服务器
+
+scp /path/local_filename username@servername:/path

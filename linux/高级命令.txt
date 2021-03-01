@@ -63,7 +63,7 @@ chkconfig --list  查看服务列表
 
 软连接：
 ln -s ./app  yy
-在当前目录会生成一个 yy链接
+在当前目录会生成一个 yy链接,注意yy不能存在存在则会生成到目录下
 删除软链
 rm -rf ./yy
 注意:rm -rf ./yy/ 会删除目标目录文件
@@ -79,5 +79,7 @@ mkdir -p /opt/kubernetes/{bin,ssl,cfg,log}
 
 scp 向远程服务传文件
 
+grep 或者调解
+grep -e timing_ -e cmdb_ids
 
 
