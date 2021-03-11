@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../lib/layui/css/layui.css"  media="all">
+    <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+</head>
+<body>
+
+<form class="layui-form layui-form-pane" action="">
+    <div class="layui-input-inline">
+        <select name="quiz3">
+            <option value="">请选角色</option>
+            <option value="西湖区">西湖区</option>
+            <option value="余杭区">余杭区</option>
+            <option value="拱墅区">临安市</option>
+        </select>
+    </div>
+</form>
+
+<script src="../lib/layui/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+    layui.use(['form', 'layedit', 'laydate'], function(){
+        var form = layui.form
+    });
+</script>
+
+</body>
+</html>

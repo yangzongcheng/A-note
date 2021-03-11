@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!--<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <title>输入提示</title>
+    <style>
+        #logo{
+            width: 50%;
+            text-align: center;
+            margin: 60px auto 0 auto;
+        }
+        #search{
+            width: 70%;
+            margin: 20px auto 0 auto;
+        }
+        #search form{
+            width: 100%;
+        }
+        #search form div{
+            width: 100%;
+        }
+        #fund{
+            width: 90%;
+            height: 55px;
+        }
+        #btn{
+            height: 55px;width: 9%;
+        }
+        #completion{
+            width: 90% !important;
+            height: 280px;
+            border: 1px solid #ccc;
+            border-top: 0;
+            margin-top: -1px;
+            color: #636b6f;
+            display: none;
+        }
+        #completion p{
+            padding: 2px 0 0 5px;
+        }
+        #completion p:hover{
+            cursor: pointer;
+            color: #000000;
+            /*font-weight: bolder;*/
+            /*color: #0f0f0f;*/
+            background-color: #e0e0e0;
+        }
+        /*手机端*/
+        @media (max-width: 768px) {
+            #logo{
+                width: 100%;
+                text-align: center;
+                margin: 30px auto 0 auto;
+            }
+            #search{
+                /*border: 1px solid black;*/
+                width: 100%;
+                position: relative;
+                padding: 10px;
+            }
+            #fund{
+                width: 80%;
+                height: 45px;
+                /*border: 1px solid black;*/
+            }
+            #btn{
+                height: 45px;width: 16%;
+                position: absolute;
+                right: 15px;
+                top: 10px;
+                /*border: 1px solid black;*/
+            }
+            #completion{
+                width: 80% !important;
+                margin-top: -15px;
+                /*width: 110%; !important;*/
+            }
+
+        }
+    </style>
+</head>
+<body>
+<!-- logo -->
+<div id="logo"><h1>输入提示</h1></div>
+<!-- 搜索框 -->
+<div id="search">
+    <form id="search_form" class="form-inline" method="get" action="">
+        <div class="form-group">
+            <label for="fund" class="sr-only">基金名称或基金代码</label>
+            <input autocomplete="off" class="form-control " id="fund" type="text" name="fund" placeholder="测试输入提示">
+            <input type="hidden" name="code" id="code">
+            <input id="btn" type="submit" value="搜索" class="btn btn-primary">
+        </div>
+        <!-- 搜索联想 -->
+        <div id="completion">
+
+        </div>
+    </form>
+</div>
+<!-- 搜索内容 -->
+<div id="searchContent">
+
+</div>
+<!-- 无搜索结果的提示 -->
+<p style="text-align: center;margin-top: 20px;">没有数据</p>
+<script>
+
+
+
+    /* 自动补全*/
+    function addInput() {
+
+        var searchStr = $('#fund').val();
+        var completion =$('#completion');
+        completion.css('display','none');
+        $.post('http://www.xintu.yangzc.com/index/getlink.html?'+searchStr,{'appid':1000,'appkey':'5f5b5d4b97df3e7874c122cf6b154ab5'},function (data) {
+
+            if(data){
+                completion.html('');
+                var names = '';
+                var info = data.data;
+                $.each(info,function (e1,e2) {
+
+                    console.log(e2);
+
+                    names+=('<p class="search_fund" myAttr='+e1+'>'+e2.title+"</p>");
+                });
+                completion.html(names);
+                if(searchStr){
+                    completion.css('display','block');
+                }
+            }
+        });
+    }
+
+    $("#fund").on({
+        //输入法完成时触发
+        compositionend:function(){
+            addInput();
+            addInput();
+        },
+        keydown:function () {
+            addInput();
+        },
+        blur:function () {
+            if($('#completion>p').length==0){
+                $('#completion').css('display','none');
+            }
+        }
+    });
+    /* 为新增的<p>DOM绑定事件 */
+    $("body").on('click','.search_fund',function(){
+        var fundName = $(this).text();
+        var code = $(this).attr('myAttr');
+        $('#fund').val(fundName);
+        $('#code').val(code);
+        $('#completion').css('display','none');
+
+    });
+</script>
+</body>
+</html>

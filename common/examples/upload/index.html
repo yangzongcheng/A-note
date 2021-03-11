@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ajax文件上传-带进度条</title>
+    <!--<link rel="stylesheet" type="text/css" href="../css/main.css" />-->
+    <style type="text/css">
+
+    </style>
+    <script type="text/javascript" src="jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="jquery.form.js"></script>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div id="header">
+
+</div>
+
+<div id="main">
+
+    <div class="demo">
+
+
+        <div class="btn">
+            <input id="fileupload" type="file" name="mypic">
+        </div>
+
+        <div class="set"></div>
+        <div class="progress progress-striped active">
+            <div class="progress-bar progress-bar-success" role="progressbar"aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:0%;">
+                <span class="sr-only">40% 完成</span>
+            </div>
+        </div>
+        <div class="files"></div>
+        <div id="showimg"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+
+
+
+        $("#fileupload").change(function(){
+            ajax_upload();
+        });
+
+    });
+
+
+    /**
+     * 2017年12月13日10:16:56
+     * yangzc
+     */
+    function ajax_upload(){
+        $("#fileupload").wrap("<form id='myupload' action='action.php?act=' method='post' enctype='multipart/form-data'></form>");
+
+        var ling = $('.progress-bar-success');
+
+        var files = $(".files");
+
+        $("#myupload").ajaxSubmit({
+            dataType:  'json',
+            beforeSend: function() {
+                var percentVal = '0%';
+                //正在上传
+            },
+            uploadProgress: function(event, position, total, percentComplete) {
+                console.log(event);
+                console.log(position);
+                console.log(total);
+                console.log(percentComplete);
+                //2017年12月13日09:30:35 yangzc
+                //在这里控制进度条宽度
+                var percentVal = percentComplete + '%';
+
+                ling.css('width',percentVal);
+                $('.set').html(percentVal);
+
+            },
+            success: function(data) {
+                files.html("<b>"+data.name+"("+data.size+"k)</b> <span class='delimg' rel='"+data.pic+"'></span>");
+
+            },
+            error:function(xhr){
+                alert('上传失败');
+                files.html(xhr.responseText);
+            }
+        });
+    }
+</script>
+
+
+</body>
+</html>

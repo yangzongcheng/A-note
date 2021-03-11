@@ -1,0 +1,73 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {margin:0;padding:0;}
+table {border-collapse:collapse;border-spacing:0;}
+fieldset,img {border:0}
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;font-weight:normal}
+ol,ul {list-style:none}
+caption,th {text-align:left}
+h1,h2,h3,h4,h5,h6 {font-size:100%;}
+q:before,q:after {content:''}
+abbr,acronym { border:0}
+input::-webkit-input-placeholder{
+    color:#ffffff;
+}
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:#ffffff;
+}
+input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:#ffffff;
+}
+input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+    color:#ffffff;
+}
+a,input,button{
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+#content{
+    background:#b42cab url("../img/big-bg.jpg") no-repeat top center;
+    background-size: 100% auto;
+}
+.banner{
+    margin-top: 0.3rem;
+    text-align: center;
+}
+.banner img{
+    max-width: 100%;
+}
+.data-main{
+    width: 92%;
+    margin: -0.24rem auto 0.5rem;
+    background:#ffffff url("../img/tit-bg.png") no-repeat top center;
+    background-size: 100% 0.82rem;
+    border-radius:10px;
+}
+.data-main table{
+    width: 96%;
+    margin: auto;
+}
+.data-main table thead th{
+    height: 0.82rem;
+    color: #ffffff;
+    font-size: 0.26rem;
+    text-indent: 0.4rem;
+}
+.data-main table tr{
+    width: 96%;
+    margin: auto;
+}
+.data-main table td{
+    height: 0.62rem;
+    border-top: 1px solid #e1e1e1;
+    color: #444444;
+    font-size: 0.24rem;
+    text-indent: 0.4rem;
+}

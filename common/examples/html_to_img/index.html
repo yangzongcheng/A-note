@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <!--<script type="text/javascript" src="js/mob.js"></script>-->
+
+
+    <script src="js/html2canvas.min.js"></script>
+
+    <!-- 将canvas图片保存成图片 -->
+    <script src="js/canvas2image.js"></script>
+    <script src="js/base64.js"></script>
+
+</head>
+<body >
+<button id="btnSave">抓取图片</button>
+<button id="Download">下载图片</button>
+<div id="content" style="width: 800px;height: 500px;border: 1px solid red">
+    <div style="width: 50%" class="banner">
+        <img src="img/banner.png">
+    </div>
+    <div class="data-main" id="data-main">
+      <table>
+        <thead>
+        <tr>
+            <th>排名</th> <th>所属部门  </th><th>顾问姓名</th> <th>上榜业绩  </th>
+        </tr>
+        </thead>
+        <tbody>
+
+
+        </tbody>
+    </table>
+    </div>
+
+</div>
+<div id="images" style="width:190px;height:302px;float:left;text-align:center;line-height:302px">图片预览区</div>
+
+<script>
+    /*生成canvas图形*/
+
+    // 获取按钮id
+    var btnSave = document.getElementById("btnSave");
+    // 获取内容id
+    var content = document.getElementById("content");
+    // 进行canvas生成
+    btnSave.onclick = function(){
+        html2canvas(content, {
+            onrendered: function(canvas) {
+                //添加属性
+                canvas.setAttribute('id','thecanvas');
+                //读取属性值
+                // var value= canvas.getAttribute('id');
+                document.getElementById('images').innerHTML = '';
+                document.getElementById('images').appendChild(canvas);
+            }
+        });
+    }
+</script>
+<script>
+    /*
+     * 说明
+     * 不支持跨域图片
+     * 不能在浏览器插件中使用
+     * 部分浏览器上不支持SVG图片
+     * 不支持Flash
+     */
+    var Download = document.getElementById("Download");
+    Download.onclick = function(){
+        var oCanvas = document.getElementById("thecanvas");
+
+        /*自动保存为png*/
+        // 获取图片资源
+        var img_data1 = Canvas2Image.saveAsPNG(oCanvas, true).getAttribute('src');
+        saveFile(img_data1, 'richer.png');
+
+
+        /*下面的为原生的保存，不带格式名*/
+        // 这将会提示用户保存PNG图片
+        // Canvas2Image.saveAsPNG(oCanvas);
+    }
+
+
+
+
+
+
+    // 保存文件函数
+    var saveFile = function(data, filename){
+        var save_link = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
+        save_link.href = data;
+        save_link.download = filename;
+
+        var event = document.createEvent('MouseEvents');
+        event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+        save_link.dispatchEvent(event);
+    };
+</script>
+</body>
+</html>
