@@ -83,3 +83,7 @@ grep 或者调解
 grep -e timing_ -e cmdb_ids
 
 
+多个文件找查字符串
+grep -r school ./
+
+

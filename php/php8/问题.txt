@@ -1,0 +1,14 @@
+安装openssl问题
+1、mac fatal error: 'openssl/opensslv.h' file not found
+置环境变量
+export CPPFLAGS=-I/usr/local/opt/openssl/include
+export LDFLAGS=-L/usr/local/opt/openssl/lib
+https://blog.csdn.net/aoerqileng/article/details/89841549
+
+2、No package 'openssl' found
+cd  /usr/local/lib/pkgconfig/
+cp libevent_openssl.pc openssl.pc
+./configure  --with-php-config=/Applications/MxSrvs/bin/php/bin/php-config  不带其他参数
+
+
+

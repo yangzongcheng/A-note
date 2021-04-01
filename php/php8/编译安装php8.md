@@ -6,7 +6,7 @@
 ```shell script
 
 
-./configure --prefix=/usr/local/php/ --enable-debug --enable-fpm --with-config-file-path=/usr/local/php/etc/ --with-config-file-scandir=/usr/local/php/etc/php.d/
+./configure --prefix=/usr/local/php/ --enable-debug --enable-fpm --with-config-file-path=/usr/local/php/etc/ --with-config-file-scan-dir=/usr/local/php/etc/php.d/
 
 注意参数目录
 
@@ -22,7 +22,7 @@ make install
 编译安装完成之后,需要从解压后的文件夹中把php.ini-development
 或是 php.ini-production 重命名成php.ini 复制到php安装文件中的相应位置,
 可在phpinfo中查看 相应位置.
-把/usr/local/php/etc/php-fpm.conf.default 复制到当前文件夹下,保存未php-fpm.conf
+把/usr/local/php/etc/php-fpm.conf.default 复制到当前文件夹下,保存为php-fpm.conf
 
 ```text
 参数说明
@@ -44,3 +44,5 @@ make install
 3、编译安装，编译时目录选择 /Applications/MxSrvs/bin/php
 4、调整php-fpm
 ```
+./configure --with-openssl --with-php-config=/Applications/MxSrvs/bin/php/bin/php-config
+

@@ -32,4 +32,7 @@ https://www.cnblogs.com/wanghanlin/p/11425262.html
 $ ipcs -m
 
 
+进程，线程与多核，多cpu之间的关系
+https://www.cnblogs.com/valjeanshaw/p/11469514.html
+
 
