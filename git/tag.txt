@@ -1,0 +1,11 @@
+1、创建一个tag
+git tag -a cmii-20210409-6 -m "代码更新"
+
+2、推送tag到远端
+git push origin  cmii-20210409-6
+
+3、查看tag详情
+git show cmii-20210409-6
+
+4、列出tag
+git tag
