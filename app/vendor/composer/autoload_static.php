@@ -82,11 +82,27 @@ class ComposerStaticInitb9449b6dc9c512c1b9eb4da31bf3cb5d
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'F' => 
+        array (
+            'FuseSource' => 
+            array (
+                0 => __DIR__ . '/..' . '/fusesource/stomp-php/src',
+            ),
+        ),
+    );
+
+    public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitb9449b6dc9c512c1b9eb4da31bf3cb5d::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitb9449b6dc9c512c1b9eb4da31bf3cb5d::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitb9449b6dc9c512c1b9eb4da31bf3cb5d::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitb9449b6dc9c512c1b9eb4da31bf3cb5d::$classMap;
 
         }, null, ClassLoader::class);
     }

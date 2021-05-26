@@ -37,8 +37,6 @@ bitcount user
 如果明天 peter 也继续阅览网站，那么执行命令 SETBIT peter 101 1 ，以此类推。
 当要计算 peter 总共以来的上线次数时，就使用 BITCOUNT 命令：执行 BITCOUNT peter ，得出的结果就是 peter 上线的总天数。
 
-
-
 bitcount命令：
 
 字母转二进制(http://www.txttool.com/wenben_strbinary.asp)
@@ -57,10 +55,12 @@ bitcount m 0 0 也就是a 返回3
 bitcount m 1 1也就是b 返回3
 
 
-bitcount  m -2 -1 倒数第二位到倒数第一位之间
+bitcount  m -2 -1 倒数第二位  -  倒数第一位之间(-1代表到时第一)
 
-
-
-————————————————
-版权声明：本文为CSDN博主「sisophon」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
 原文链接：https://blog.csdn.net/qq_34206560/article/details/90705402
+
+
+链接：https://segmentfault.com/a/1190000008188655
+使用场景一：用户签到
+使用场景二：统计活跃用户
+使用场景三：用户在线状态

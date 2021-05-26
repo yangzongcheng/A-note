@@ -7,8 +7,12 @@ https://www.jianshu.com/p/086cf151c60c
 JetbrainsPatch_20210101.zip
 仔细查看安装说明
 
-
-
 拖动到phpstorm打开的空白处：
 JetbrainsPatch_20210101.zip
 
+
+
+如果实在激活不了就重置试用时间
+http://www.520xiazai.com/soft/jetbrains-eval-reset.html
+
+http://www.520xiazai.com/list/8_1.html
