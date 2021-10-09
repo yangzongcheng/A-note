@@ -11,7 +11,7 @@ https://github.com/WeiYe-Jing/datax-web/blob/master/userGuid.md
 数据库名不要带"-"破折号，语义识别可能会出问题可以带"—"下划线
 
 
-sj2
+
 
 
 
