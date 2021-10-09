@@ -1,0 +1,1 @@
+show create table tf_resource\G; -- 查看表结构

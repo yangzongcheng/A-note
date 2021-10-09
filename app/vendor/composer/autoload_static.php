@@ -19,7 +19,10 @@ class ComposerStaticInitb9449b6dc9c512c1b9eb4da31bf3cb5d
         'P' => 
         array (
             'Psr\\Log\\' => 8,
-            'PhpAmqpLib\\' => 11,
+        ),
+        'L' => 
+        array (
+            'Library\\' => 8,
         ),
         'G' => 
         array (
@@ -48,9 +51,9 @@ class ComposerStaticInitb9449b6dc9c512c1b9eb4da31bf3cb5d
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
-        'PhpAmqpLib\\' => 
+        'Library\\' => 
         array (
-            0 => __DIR__ . '/..' . '/php-amqplib/php-amqplib/PhpAmqpLib',
+            0 => __DIR__ . '/../..' . '/Library',
         ),
         'GuzzleHttp\\Stream\\' => 
         array (

@@ -21,6 +21,7 @@ git merge  local 合并本地分支local
 
 
 git reset --hard  回退
+git reset --hard  comment_id 回退到指定提交版本
 
 
 

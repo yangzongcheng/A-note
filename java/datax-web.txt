@@ -1,0 +1,14 @@
+安装手册
+https://github.com/WeiYe-Jing/datax-web/blob/master/userGuid.md
+
+问题
+注意jdk必须要用jdk8版本，才能编译成功
+
+安装的时候如果安装失败可以手动解压packages 下的压缩文件到 modules文件夹里在执行安装命令
+如果没有modules文件夹需要运行 ./bin/install.sh  或者手动建一个试试
+
+
+数据库名不要带"-"破折号，语义识别可能会出问题可以带"—"下划线
+
+
+

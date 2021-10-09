@@ -3,6 +3,8 @@ MySQL的四种事务隔离级别
 查看当前数据库的隔离级别
 select @@tx_isolation;
 
+select @@transaction_isolation;  mysql8 用这个
+
 一、事务的基本要素（ACID）
 
 　 　1、原子性（Atomicity）：事务开始后所有操作，要么全部做完，要么全部不做，不可能停滞在中间环节。事务执行过程中出错，

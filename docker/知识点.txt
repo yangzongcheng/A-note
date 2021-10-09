@@ -1,4 +1,4 @@
-docker ps -a  列出容器
+ docker ps -a  列出容器
 
 docker images 列出镜像
 

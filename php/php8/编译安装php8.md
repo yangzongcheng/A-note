@@ -6,7 +6,11 @@
 ```shell script
 
 
-./configure --prefix=/usr/local/php/ --enable-debug --enable-fpm --with-config-file-path=/usr/local/php/etc/ --with-config-file-scan-dir=/usr/local/php/etc/php.d/
+./configure --prefix=/usr/local/php/ --enable-debug --enable-fpm --with-config-file-path=/usr/local/php/etc/ 
+
+--with-config-file-scan-dir=/usr/local/php/etc/php.d/
+
+
 
 注意参数目录
 
@@ -46,3 +50,58 @@ make install
 ```
 ./configure --with-openssl --with-php-config=/Applications/MxSrvs/bin/php/bin/php-config
 
+--enable-fpm  fpm
+
+查看帮助
+./configure --help
+
+知道ini位置
+--with-config-file-path=/Applications/MxSrvs/bin/php/etc 
+
+//扫描配置文件的路径
+--with-config-file-scan-dir=/Applications/MxSrvs/bin/php/etc/php.d/
+
+
+
+./configure  --prefix=/Applications/MxSrvs/bin/php  
+
+--with-iconv=/usr/local/opt/libiconv/   
+--with-curl  --with-xml   --enable-opcache  --enable-fpm 
+--with-config-file-path=/Applications/MxSrvs/bin/php/etc  
+--with-config-file-scan-dir=/Applications/MxSrvs/bin/php/etc/php.d/
+
+
+
+
+./configure \
+--prefix=/Applications/MxSrvs/bin/php \
+--with-config-file-path=/Applications/MxSrvs/bin/php/etc \
+--with-config-file-scan-dir=/Applications/MxSrvs/bin/php/etc/conf.d \
+--with-iconv=/usr/local/opt/libiconv/   \
+--with-curl \
+--with-xml \
+--enable-fpm \
+--enable-opcache \
+--enable-pdo \
+--enable-xml \
+--with-mysqli \
+--with-pdo-mysql \
+--with-zlib \
+--enable-zip \
+--enable-mbstring \
+--enable-ftp \
+--with-gd \
+--enable-mysqlnd \
+--with-openssl-dir=/usr/local/opt/openssl/ \
+--with-openssl \
+
+
+
+如果装不上去请尝试多个版本有的版本有毒就是装不上去
+
+7版本建议装7.4.20 版本
+
+yaml 扩展安装
+pecl install yaml
+
+安装扩展的最简单的办法就是去pecl 官网搜索下载下来自己编译

@@ -1,4 +1,6 @@
 <?php
+
+phpinfo();die;
 /**
  * @param $data
  * 打印
