@@ -63,13 +63,12 @@ make install
 
 
 
-./configure  --prefix=/Applications/MxSrvs/bin/php  
-
---with-iconv=/usr/local/opt/libiconv/   
---with-curl  --with-xml   --enable-opcache  --enable-fpm 
---with-config-file-path=/Applications/MxSrvs/bin/php/etc  
+./configure  --prefix=/Applications/MxSrvs/bin/php \
+--with-iconv=/usr/local/opt/libiconv/   \
+--with-curl  --with-xml   --enable-opcache  --enable-fpm  \
+--with-config-file-path=/Applications/MxSrvs/bin/php/etc  \
 --with-config-file-scan-dir=/Applications/MxSrvs/bin/php/etc/php.d/
-
+--enable-mysqlnd 
 
 
 
@@ -92,7 +91,7 @@ make install
 --enable-ftp \
 --with-gd \
 --enable-mysqlnd \
---with-openssl-dir=/usr/local/opt/openssl/ \
+--with-openssl-dir=/usr/local/opt/openssl@1.1/  \
 --with-openssl \
 
 

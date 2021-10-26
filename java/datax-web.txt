@@ -1,6 +1,11 @@
 安装手册
 https://github.com/WeiYe-Jing/datax-web/blob/master/userGuid.md
 
+https://github.com/WeiYe-Jing/datax-web/blob/master/doc/datax-web/datax-web-deploy.md
+
+datax-web打包后html静态文件存放路径
+/usr/local/datax-web/build/datax-web-2.1.2/modules/datax-admin/conf/static
+
 问题
 注意jdk必须要用jdk8版本，才能编译成功
 
@@ -10,8 +15,16 @@ https://github.com/WeiYe-Jing/datax-web/blob/master/userGuid.md
 
 数据库名不要带"-"破折号，语义识别可能会出问题可以带"—"下划线
 
-
-2021年10月09日14:16:31
-
+如果是字linux上 mvn 编译失败可能是没有sudo权限的原因
 
 
+sudo mvn clean install
+如果sudo 没有生效：https://www.cnblogs.com/zipon/p/7366841.html
+
+报 /usr/bin/python: can't find '__main__' module in ''的错
+https://github.com/WeiYe-Jing/datax-web/issues/336
+
+
+修改datax_executor下resources/application.yml文件
+
+pypath: /Users/mac/tools/datax/bin/datax.py
