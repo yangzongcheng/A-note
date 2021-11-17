@@ -13,6 +13,12 @@ git push origin --delete localbranch  删除远程分支
 
 git checkout -b localbranch   新建本地分支git branch
 
+git checkout -b channel-cmii origin/channel-cmii  新建本地分支channel-cmii并且拉取远端origin/channel-cmii 分支的代码
+
+如果远端分支在本地没油则需要更新
+git fetch
+
+
 git push origin localbranch:localbranch   将本地分支推送到远程分支
 
 git push --set-upstream origin dev 本地分支推送到远程分支(远程将多一个分支)
