@@ -44,6 +44,8 @@
     
       -- 查询pos点从2810开始查询跳过两条数据查询4条数据
       show binlog events in 'binlog.000001' from 2810 limit 2,4;
+  
+      -- 通过info可分析出具体操作  
     ```
 
 - **binlog 常用命令**
@@ -79,8 +81,14 @@
       #整个命令的含义是通过mysqlbinlog读取日志内容并通过管道传给mysql命令，-v表示执行此mysql命令
       
       ```
-      - --start-position 开始pos
-      - --stop-position 结束pos
+      - ![img.png](./.static/img.png)
+      - --start-position 开始pos,一般对应end_log_pos BEGIN对应的值，如上图 343618
+      - --stop-position 结束pos,一般对应end_log_pos COMMIT的值，如上图 343813
       - --database 数据库名称
     
-    - 通过时间恢复
+  - 通过时间恢复
+      ```shell
+         mysqlbinlog --base64-output=decode-rows -v /var/lib/mysql/mysql-bin.000001
+         #通过此命令分析具体时间 
+         mysqlbinlog --start-datetime="2021-12-22 16:07:37" --stop-datetime="2021-12-22 16:09:23"  --database=yt  ./binlog.000005 | mysql -uroot -p  -v yt
+      ```
