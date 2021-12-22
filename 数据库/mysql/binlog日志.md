@@ -92,6 +92,6 @@
   - 通过时间恢复
       ```shell
          mysqlbinlog --base64-output=decode-rows -v /var/lib/mysql/mysql-bin.000001
-         #通过此命令分析具体时间，时间范围可以不和日志里一样
+         #通过此命令分析具体时间，时间范围可以不和日志里不一样
          mysqlbinlog --start-datetime="2021-12-22 16:07:37" --stop-datetime="2021-12-22 16:09:23"  --database=yt  ./binlog.000005 | mysql -uroot -p  -v yt
       ```
