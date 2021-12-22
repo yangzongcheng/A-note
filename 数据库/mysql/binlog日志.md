@@ -80,6 +80,9 @@
       
       #整个命令的含义是通过mysqlbinlog读取日志内容并通过管道传给mysql命令，-v表示执行此mysql命令
       
+      mysqlbinlog --start-datetime="2021-12-22 16:07:37" --stop-datetime="2021-12-22 16:09:23"  --database=yt  ./binlog.000005 | mysql -uroot -p  -v yt>./aaa.sql
+      #将结果存入aaa.sql
+      
       ```
       - ![img.png](./.static/img.png)
       - --start-position 开始pos,一般对应end_log_pos BEGIN对应的值，如上图 343618
@@ -89,6 +92,6 @@
   - 通过时间恢复
       ```shell
          mysqlbinlog --base64-output=decode-rows -v /var/lib/mysql/mysql-bin.000001
-         #通过此命令分析具体时间 
+         #通过此命令分析具体时间，时间范围可以不和日志里一样
          mysqlbinlog --start-datetime="2021-12-22 16:07:37" --stop-datetime="2021-12-22 16:09:23"  --database=yt  ./binlog.000005 | mysql -uroot -p  -v yt
       ```
