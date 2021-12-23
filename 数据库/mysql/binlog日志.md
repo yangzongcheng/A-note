@@ -1,4 +1,4 @@
-## mysql binlog日志及备份恢复
+## mysql binlog日志及日志恢复
 
 - **my.cnf 配置说明**
     - 模式 binlog_format=MIXED
