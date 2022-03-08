@@ -48,4 +48,5 @@ sleep 1
 
 # 启动新的容器
 docker run -d --restart always -p 10091:9501 -v /www/limx/legal_api.env:/opt/www/.env --name legal_api2 registry.cn-shanghai.aliyuncs.com/xxx/legal_api:latest
+
 ```

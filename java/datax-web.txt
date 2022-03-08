@@ -25,6 +25,8 @@ sudo mvn clean install
 https://github.com/WeiYe-Jing/datax-web/issues/336
 
 
+
+/usr/local/datax-web/build/datax-web-demo/modules/datax-executor/conf]$ cat application.yml
 修改datax_executor下resources/application.yml文件
 
 pypath: /Users/mac/tools/datax/bin/datax.py

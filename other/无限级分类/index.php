@@ -78,11 +78,11 @@ dd($arrays);
 /*
  * 获得递归完的数据,遍历生成分类
  */
-$array = getTree($array);
-
-foreach($array as $value){
-       echo str_repeat('--', $value['level']), $value['name'].'<br />';
-}
+//$array = getTree($array);
+//
+//foreach($array as $value){
+//       echo str_repeat('--', $value['level']), $value['name'].'<br />';
+//}
 
 
 
