@@ -1,5 +1,7 @@
 show create table tf_resource\G; -- 查看表结构
 
+desc user_list; -- 查看user_list 的表结构
+
 
 -- 查看每个库占用磁盘大小
 select TABLE_SCHEMA, concat(truncate(sum(data_length)/1024/1024,2),' MB') as data_size,
