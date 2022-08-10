@@ -16,7 +16,7 @@ SET @preparedStatement = (SELECT IF(
             AND (table_schema = @dbname)
             AND (column_name = @columnname)
         ) > 0,
-        CONCAT("ALTER TABLE ", @tablename, " MODIFY ", @columnname, " ;"),
+        CONCAT("ALTER TABLE ", @tablename, " drop column ", @columnname, " ;"),
         "SELECT 1"
         )
 );
