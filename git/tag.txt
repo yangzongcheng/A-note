@@ -10,6 +10,8 @@ git show cmii-20210409-6
 4、列出tag
 git tag
 
+5、创建本地分支yangzc-yaf 基于标签 ischool-20220929-2
+git branch yangzc-yaf ischool-20220929-2
 
 
 上线

@@ -46,7 +46,7 @@ abstract class DataAbstract
 }
 
 
-#[Myattr('A','A类注解',000)]
+#[Myattr('A','A类注解',1231)]
 class A extends DataAbstract {
 
 }

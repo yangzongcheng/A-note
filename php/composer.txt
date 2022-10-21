@@ -5,6 +5,8 @@ composer require 包名称; #引入包,会在composer.json新增一条包配置,
 composer remove 包名称; #删除包
 composer dump-autoload;#生成当前命名空间与类库文件路径的一个映射，运行时加载会直接读取这个映射，加快文件的加载速度。
 
+composer show -i 列表包名
+
 
 
 1，查看源composer config -g -l
