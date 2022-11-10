@@ -35,12 +35,15 @@ abstract class DataAbstract
         #ReflectionFunction 函数注解
         $ref=new ReflectionClass(static::class);
         $attr=$ref->getAttributes(Myattr::class)[0];
+
         $obj=$attr->newInstance();
         $arr =[
             'name'=>$obj->name,
             'value'=>$obj->value,
             'number'=>$obj->number
         ];
+
+
         return $arr;
     }
 }
@@ -48,7 +51,11 @@ abstract class DataAbstract
 
 #[Myattr('A','A类注解',1231)]
 class A extends DataAbstract {
+    public function test():array
+    {
 
+        return $this->getData();
+    }
 }
 
 #[Myattr('B','B类注解',12333123)]
@@ -57,7 +64,7 @@ class B extends DataAbstract{
 }
 
 
-$data = (new A())->getData();
+$data = (new A())->test();
 
 
 print_r($data);
