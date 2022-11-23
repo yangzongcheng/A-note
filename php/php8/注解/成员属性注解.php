@@ -91,8 +91,8 @@ class A extends DataAbstract {
         return true;
     }
 
-   #[PropertyArr('属性userName','备注userName')]
-   public string $userName;
+    #[PropertyArr('属性userName','备注userName')]
+    public string $userName;
 
 
     #[PropertyArr('属性userAccount','备注userAccount')]
