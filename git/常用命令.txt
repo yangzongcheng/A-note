@@ -2,6 +2,10 @@ git remote -v  查看远程地址
 
 git clone -b channel-cmii ssh://git@git.i-school.net:2032/platform/yaf.git  克隆分支代码
 
+git clone -b production https://gitee.com/yangzongcheng/muyun.git
+
+
+
 git fetch origin dev（dev为远程仓库的分支名）    拉取远程分支
 
 git checkout dev  切换到dev 分支

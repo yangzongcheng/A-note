@@ -47,6 +47,7 @@ abstract class DataAbstract
 {
     protected function getData():array
     {
+
         #ReflectionFunction 函数注解
         $ref=new ReflectionClass(static::class);
 

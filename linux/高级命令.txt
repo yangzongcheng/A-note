@@ -23,6 +23,8 @@ cat /proc/version  查看系统信息 显示 centos 还是  ubuntu
 
 ps aux |grep 8080
 
+pstree |grep php
+
 top -p pid  查看某个进程的cup占比
 
 strace -p 17535  进程追踪
