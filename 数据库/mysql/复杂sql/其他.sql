@@ -11,3 +11,14 @@ SET
         WHERE
                 id = a.id
     )
+
+
+
+-- 字段替换更新
+UPDATE
+    db_user_account
+SET
+    account = REPLACE(account, '@100', '@200')
+WHERE
+        account LIKE "%@100"
+  AND type = 'mail';
