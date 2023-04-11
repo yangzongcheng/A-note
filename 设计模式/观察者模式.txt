@@ -88,6 +88,8 @@ class order {
         $this->obServer('buy'); // buy动作
     }
 }
+
+
 class orderEmail
 {
     public static function update($order)
@@ -95,6 +97,8 @@ class orderEmail
         echo '发送购买成功一个邮件';
     }
 }
+
+
 class orderStatus
 {
     public static function update($order)

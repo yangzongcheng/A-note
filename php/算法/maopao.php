@@ -19,7 +19,6 @@ function maopao2($arr)
             } else {
                 print_r(['count' => $count, 'arr' => json_encode($arr)]);
             }
-
         }
     }
 
