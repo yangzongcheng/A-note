@@ -34,8 +34,14 @@ git push --set-upstream origin dev 本地分支推送到远程分支(远程将�
 git merge  local 合并本地分支local
 
 
-git reset --hard  回退
+git reset --hard  回退本地未提交的修改
 git reset --hard  comment_id 回退到指定提交版本
+
+git 撤销commit
+git reset --soft HEAD~1 撤回最近一次的commit(撤销commit，不撤销git add)
+git reset --mixed HEAD~1 撤回最近一次的commit(撤销commit，撤销git add)
+
+git commit --amend 撤销上一次提交  并将暂存区文件重新提交
 
 
 git在本地会保存两个版本的仓库，分为本地仓库和远程仓库。
