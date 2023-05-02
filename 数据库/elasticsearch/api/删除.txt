@@ -1,0 +1,12 @@
+删除一个索引
+用以下的请求来 删除索引:
+
+DELETE /my_index
+你也可以这样删除多个索引：
+
+DELETE /index_one,index_two
+DELETE /index_*
+你甚至可以这样删除 全部 索引：
+
+DELETE /_all
+DELETE /*

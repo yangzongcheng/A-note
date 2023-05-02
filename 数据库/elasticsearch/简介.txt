@@ -1,0 +1,26 @@
+Elasticsearch是什么？
+
+Elasticsearch is the distributed search and analytics engine at the heart of the Elastic Stack.
+简单说，Elasticsearch 就是一个分布式的搜索与分析引擎。
+
+lasticSearch是一个基于Lucene的搜索服务器。它提供了一个分布式多用户能力的全文搜索引擎，
+基于RESTful web接口。Elasticsearch是用Java语言开发的，并作为Apache许可条款下的开放源码发布，
+是一种流行的企业级搜索引擎。ElasticSearch用于云计算中，能够达到实时搜索，稳定，可靠，快速，安装使用方便。
+官方客户端在Java、.NET（C#）、PHP、Python、Apache Groovy、Ruby和许多其他语言中都是可用的。
+根据DB-Engines的排名显示，Elasticsearch是最受欢迎的企业搜索引擎，其次是Apache Solr，也是基于Lucene。
+
+
+
+为什么需要 Elasticsearch？
+
+用数据库，也可以实现搜索的功能，为什么还需要搜索引擎呢？
+
+
+为什么es不能代替mysql
+个人觉得不能完全替代，就以下几点
+1、es没有事务
+2、而且是近实时的，变更不能立现
+3、一些关系比较复杂的数据用mysql这样的关系数据库用sql很容易实现，但是es就相当的复杂了
+
+
+

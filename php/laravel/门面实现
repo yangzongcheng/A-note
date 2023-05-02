@@ -1,0 +1,30 @@
+在app文件夹下面创建Facades文件夹：
+里面创建一个静态类：文件名称为Common.php，里面的内容为：
+<?php
+namespace App\Facades;
+
+use Illuminate\Support\Facades\Facade;
+
+class Common extends Facade
+{
+
+    protected static function getFacadeAccessor()
+    {
+        return 'CommonService';//注意CommonService 必须是容器注册的名称
+    }
+
+     
+
+}
+
+
+在config配置文件中打开app.php
+在'aliases'数组中添加：
+'Common' => App\Facades\Common::class,
+
+
+调用
+use App\Facades\Common;
+
+Common::getInfo();//调用容器方法
+

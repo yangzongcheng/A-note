@@ -1,0 +1,28 @@
+InnoDB 悲观锁实现  独占锁  排它锁
+
+需要事务支持
+
+start transaction;
+select * from h_wap where id = 1 for update;//sql 必须包含索引
+
+commit;
+
+
+//上面的事务  提交之前 以下执行会被阻塞
+select * from h_wap where id = 1 for update;//锁释放前不能再次加锁,会等待所释放才能获取锁
+
+select * from h_wap where id = 1 ;//不会阻塞
+
+update h_wap  set  a =1 where id =1 //会阻塞排队
+
+
+select * from h_wap where id = 1  and age =12  for update  //如果id 和 age 都不是索引条件查询有值则会锁住整个表表级锁
+
+
+当for update的字段为索引或者主键的时候，只会锁住索引或者主键对应的行。
+
+而当for update的字段为普通字段的时候，Innodb会锁住整张表。
+
+
+
+

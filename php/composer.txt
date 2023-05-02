@@ -1,0 +1,50 @@
+composer install;  #安装包,根据composer.json
+composer update;   #更新包,升级composer.json的所有代码库(如果能升级的话)
+composer search 关键字; #搜索包,搜索composer可用的包
+composer require 包名称; #引入包,会在composer.json新增一条包配置,并下载该代码包 
+composer remove 包名称; #删除包
+composer dump-autoload;#生成当前命名空间与类库文件路径的一个映射，运行时加载会直接读取这个映射，加快文件的加载速度。
+
+composer show -i 列表包名
+
+
+
+1，查看源composer config -g -l
+2，修改源：配置只在当前项目生效
+composer config repo.packagist composer https://mirrors.aliyun.com/composer/
+取消当前项目配置
+composer config --unset repos.packagist
+3，修改源：配置全局生效
+composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
+取消全局配置
+composer config -g --unset repos.packagist
+
+
+
+composer list 显示所有命令
+
+ composer show 显示所有包信息
+
+ composer install 在 composer.json 配置中添加依赖库之后运行此命令安装
+
+ composer create-project laravel/laravel Laravel –prefer-dist “5.1.*” 创建项目
+
+ composer search packagename 搜索包
+
+ composer update 更新所有包
+
+ composer update monolog/monolog 更新指定包
+
+ composer remove monolog/monolog 移除指定的包
+
+ composer require monolog/monolog 添加指定包
+
+ composer require monolog/monolog:1.19 添加指定包和版本
+
+ composer require monolog/monolog=1.19
+
+ composer require monolog/monolog 1.19
+
+ composer dump-autoload //自动加载
+
+

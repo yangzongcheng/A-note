@@ -1,0 +1,35 @@
+目录：
+/Users/yangzc/elasticsearch/bin
+
+启动：
+进入bin目录:
+$ cd bin
+$ ./elasticsearch
+
+本地浏览器访问http://localhost:9200
+
+查询接口
+http://localhost:9200/_search  所有数据
+
+http://localhost:9200/t_user/_search //索引查询 t_test未索引
+
+1、使用go-mysql-elasticsearch同步mysql数据库信息到ElasticSearch
+
+下载go-mysql-elasticsearch
+make 安装
+配置 etc/river.toml
+
+启动
+./bin/go-mysql-elasticsearch -config=./etc/river.toml
+
+完成配置
+
+
+2.elasticsearch-jdbc 同步mysql
+
+
+
+
+
+
+

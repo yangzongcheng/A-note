@@ -1,0 +1,86 @@
+git remote -v  查看远程地址
+
+git clone -b channel-cmii ssh://git@git.i-school.net:2032/platform/yaf.git  克隆分支代码
+
+git clone -b production https://gitee.com/yangzongcheng/muyun.git
+
+
+
+git fetch origin dev（dev为远程仓库的分支名）    拉取远程分支
+
+git checkout dev  切换到dev 分支
+
+git branch -a  查看远程分支
+
+git branch 查看本地分支
+
+git branch -D local 删除本地分支(需要切换到其他分支才能删除)
+
+git push origin --delete localbranch  删除远程分支
+
+
+git checkout -b localbranch   新建本地分支git branch
+
+git checkout -b channel-cmii origin/channel-cmii  新建本地分支channel-cmii并且拉取远端origin/channel-cmii 分支的代码
+
+如果远端分支在本地没油则需要更新
+git fetch
+
+
+git push origin localbranch:localbranch   将本地分支推送到远程分支
+
+git push --set-upstream origin dev 本地分支推送到远程分支(远程将多一个分支)
+
+git merge  local 合并本地分支local
+
+
+git reset --hard  回退本地未提交的修改
+git reset --hard  comment_id 回退到指定提交版本
+
+git 撤销commit
+git reset --soft HEAD~1 撤回最近一次的commit(撤销commit，不撤销git add)
+git reset --mixed HEAD~1 撤回最近一次的commit(撤销commit，撤销git add)
+
+git commit --amend 撤销上一次提交  并将暂存区文件重新提交
+
+
+git在本地会保存两个版本的仓库，分为本地仓库和远程仓库。
+1、本地仓库就是我们平时 add、commit 的那个仓库。
+2、远程仓库可以用git remote -v查看（这里的远程仓库是保存在本地的远程仓库，等同于另一个版本，不是远程的远程仓库）。
+
+说说 fetch 和 pull 的不同:
+
+fetch 只能更新远程仓库的代码为最新的，本地仓库的代码还未被更新，我们需要通过 git merge origin/master 来合并这两个版本，你可以把它理解为合并分支一样的。
+
+pull 操作是将本地仓库和远程仓库（本地的）更新到远程的最新版本。
+
+如果想要更加可控一点的话推荐使用fetch + merge。
+
+
+1、一般用法
+本地创建两个分支  dev  test
+dev用来开发 
+test 用来合并开发 并推送到远端
+
+
+git checkout  dev 
+
+git checkout test
+
+git merge  dev
+
+git push origin test  推送到远端test
+
+
+
+
+
+
+
+
+
+
+
+
+
+

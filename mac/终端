@@ -1,0 +1,16 @@
+oh-my-zsh
+
+zsh-syntax-highlighting
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+iterm
+https://www.iterm2.com
+
+zsh-autosuggestions
+
+https://sequelpro.com/test-builds
+
+
+mac item2 支持rz sz方法
+https://blog.csdn.net/fantian_/article/details/116136794

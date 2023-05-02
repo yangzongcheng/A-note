@@ -1,0 +1,15 @@
+1.从远程服务器下载
+
+scp username@servername:/path/filename /tmp/local_destination
+
+2.上传到远程服务器
+
+scp /path/local_filename username@servername:/path
+
+
+指定端口
+scp -P 20039 ./provider.ini cyy@192.168.1.10:~/
+
+
+3、上传文件夹 -r
+scp -r  -P 20039 ./Eweixin/ cyy@192.168.1.10:/opt/zxedu/201901/cmii-dev/platform-yaf/current/application/library/Provider/ThirdService

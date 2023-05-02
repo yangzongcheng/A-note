@@ -1,0 +1,5 @@
+初始化
+go mod init gin_framework
+#gin_framework为项目名称
+
+go mod vendor

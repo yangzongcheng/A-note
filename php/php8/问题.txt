@@ -1,0 +1,40 @@
+安装openssl问题
+1、mac fatal error: 'openssl/opensslv.h' file not found
+
+置环境变量
+export CPPFLAGS=-I/usr/local/opt/openssl/include
+export LDFLAGS=-L/usr/local/opt/openssl/lib
+
+export CPPFLAGS=-I/usr/local/Cellar/openssl@1.1/1.1.1j/include
+export LDFLAGS=-L/usr/local/Cellar/openssl@1.1/1.1.1j/lib
+
+
+export CPPFLAGS=-I/usr/local/opt/openssl@1.1/include
+export LDFLAGS=-L/usr/local/opt/openssl@1.1/lib
+
+https://blog.csdn.net/aoerqileng/article/details/89841549
+
+2、No package 'openssl' found
+cd  /usr/local/lib/pkgconfig/
+cp libevent_openssl.pc openssl.pc
+./configure  --with-php-config=/Applications/MxSrvs/bin/php/bin/php-config  不带其他参数
+
+
+
+yes --with-openssl-dir=/usr/local/opt/openssl/
+
+
+3、ld: symbol(s) not found for architecture x86_64
+可能是mysqlnd 扩展的问题
+没有config.m4 文件,找到扩展将config9.m4 改成 config.m4
+
+make clean
+
+make clean
+vim Makefile
+EXTRA_LIBS 后 追加libssl.dylib 和 libcrypto.dylib 的路径，重新make就好了
+
+./configure \
+--enable-openssl \
+--enable-http2  \
+--with-openssl-dir=/usr/local/opt/openssl@1.1/

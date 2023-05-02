@@ -1,0 +1,36 @@
+nginx内存管理整体可以分为2个部分，
+第一部分是常规的内存池，用于进程平时所需的内存管理；
+第二部分是共享内存的管理。总体而言，共享内存教内存池要复杂的多。
+
+
+nginx内存池的使用较为简单,可以分为3步，
+
+1、调用ngx_create_pool函数获取ngx_pool_t指针。
+//size代表ngx_pool_t一块的大小
+ngx_pool_t* ngx_create_pool(size_t size, ngx_log_t *log)
+
+
+2、调用ngx_palloc申请内存使用
+//从pool中申请size大小的内存
+void* ngx_palloc(ngx_pool_t *pool, size_t size)
+
+
+
+3、释放内存(可以释放大块内存或者释放整个内存池)
+//释放从pool中申请的大块内存
+ngx_int_t ngx_pfree(ngx_pool_t *pool, void *p)
+//释放整个内存池
+void ngx_destroy_pool(ngx_pool_t *pool)
+
+
+
+对于小块内存空间, nginx首先查看当前内存块待分配的空间中，是否能够满足用户需求，如果可以，则直接将这部分内存返回。
+如果不能满足用户需求，则需要重新申请一个内存块，申请的内存块与当前块空间大小相同，
+将新申请的内存块通过链表链接到上一个内存块，从新的内存块中分配用户所需的内存。
+小块内存并不释放，用户申请后直接使用，即使后期不再使用也不需要释放该内存。由于用户有时并不知道自己使用的内存块是大是小，
+此时也可以调用ngx_pfree函数释放该空间，该函数会从大空间链表中查找内存，找到则释放内存。对于小内存而言，并未做任何处理。
+对于大块内存, nginx会将这些内存放到链表中存储，通过pool->large进行管理。值得注意的是，
+用户管理大内存的ngx_pool_large_t结构是从本内存池的小块内存中申请而来，也就意味着无法释放这些内存，
+nginx则是直接复用ngx_pool_large_t结构体。当用户需要申请大内存空间时，利用c函数库malloc申请空间，
+然后将其挂载某个ngx_pool_large_t结构体上。nginx在需要一个新的ngx_pool_large_t结构时，会首先pool->large链表的前3个元素中，
+查看是否有可用的,如果有则直接使用，否则新建ngx_pool_large_t结构。

@@ -1,0 +1,94 @@
+根据关键字目录下搜索
+grep -r "yafcio" web/
+
+linux查看并发连接数：
+netstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}'
+
+centos 查看对外开放端口
+netstat -anp
+
+查看80端口连接数
+netstat -nat | grep -i "80" | wc -l
+
+nload 流量监控
+
+cat /proc/version  查看系统信息 显示 centos 还是  ubuntu
+
+查看端口进程 lsof -i:4443
+查看发行版本号 lsb_release -a
+查看32/64位 uname -a
+
+查看开放的端口 iptables-save
+查看被监听的端口 netstat -tlunp
+
+ps aux |grep 8080
+
+pstree |grep php
+
+top -p pid  查看某个进程的cup占比
+
+strace -p 17535  进程追踪
+dtruss -p pid mac使用这个命令
+
+pstack  pid 跟踪进程栈
+
+
+tree dir 目录树形结构展示
+pstree -p pid
+
+lsof  -i tcp #列出所有tcp网络连接
+lsof  -i udp #列出所有udp网络连接信息
+lsof -i :8080 #列出使用8080端口信息
+
+
+ss -t -a 查看tcp连接
+
+ulimit -n 最大连接数
+
+lscpu 查看cup信息
+
+查看某个进程下的线程
+ps -T -p <pid>
+top -H -p <pid>
+
+
+grep常用参数的作用及示例
+参数	作用
+-c	只显示筛选出的结果的行数，效果等同于grep xx|wc -l
+-e	筛选出包含xx或yy…的内容 grep -e xx -e yy ...
+-i	进行筛选时，忽略大小写
+-n	在筛选出的结果前面加上行号
+-v	筛选出不含xx的内容 grep -v xx
+-w	全字符精确匹配
+
+服务：
+chkconfig --list  查看服务列表
+
+
+
+软连接：
+ln -s ./app  yy
+在当前目录会生成一个 yy链接,注意yy不能存在存在则会生成到目录下
+删除软链
+rm -rf ./yy
+注意:rm -rf ./yy/ 会删除目标目录文件
+
+awk 日志分析
+
+卸载yum 安 装的软件
+yum -y remove httpd
+
+多层级目录创建
+mkdir -p /opt/kubernetes/{bin,ssl,cfg,log}
+
+
+scp 向远程服务传文件
+
+grep 或者调解
+grep -e timing_ -e cmdb_ids
+
+
+多个文件找查字符串
+grep -r school ./
+
+

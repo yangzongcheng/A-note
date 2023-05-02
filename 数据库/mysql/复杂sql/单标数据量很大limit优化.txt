@@ -1,0 +1,2 @@
+select id from product limit 866613,20     -- 20 0.2秒
+SELECT * FROM product WHERE ID > =(select id from product limit 866613, 1) limit 20  --0.2s

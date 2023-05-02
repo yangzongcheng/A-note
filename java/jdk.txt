@@ -1,0 +1,12 @@
+
+java -version
+
+mac jdk目录
+/Library/Java/JavaVirtualMachines/
+
+mac jdk全局
+#指定java jdk目录
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+
+很多java 代码要在java8执行
+

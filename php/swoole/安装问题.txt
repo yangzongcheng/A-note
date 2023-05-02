@@ -1,0 +1,6 @@
+1、编译是报错：swoole 'openssl/ssl.h' file not found
+brew info openssl
+ 6564* echo 'export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"' >> ~/.zshrc
+ 6565* export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+ 6566* export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+ 6567* source ~/.zshrc

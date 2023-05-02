@@ -1,0 +1,42 @@
+1.什么叫间隙锁
+当我们用范围条件而不是相等条件检索数据，并请求共享或排他锁时，InnoDB会给符合条件的已有数据记录的索引项加锁；
+对于键值在条件范围内但不存在的记录，叫做“间隙(GAP)”，InnoDB也会对这个“间隙”加锁，这种锁机制就是所谓的间隙锁(NEXT-KEY)锁。
+
+间隙锁（Gap Lock）是Innodb在\color{red}{可重复读}提交下为了解决幻读问题时引入的锁机制
+
+当for update的字段为索引或者主键的时候，只会锁住索引或者主键对应的行。
+
+而当for update的字段为普通字段的时候，Innodb会锁住整张表。
+
+例子：
+假设有以下表t_student：（其中id为PK，name为非唯一索引）
+id	name	sex	address
+1	zhaoyi	0	beijin
+3	sunsan	1	shanghai
+4	lisi	0	guangzhou
+
+select id,name from t_student where id > 0 and id < 5 for update;
+
+select ... for update这条语句，是会对数据记录加锁的，
+这里因为命中了索引，加的是行锁。从数据记录来看，
+这里排它锁锁住数据是id为1、3和4的这3条数据。
+
+但是，看看前面我们的介绍——对于键值在条件范围内但不存在的记录，
+叫做“间隙(GAP)”，InnoDB也会对这个“间隙”加锁。
+键值在条件范围但是不存在的记录，就是id为2的记录，
+这里会对id为2数据加上间隙锁。
+假设这时候如果有id=2的记录insert进来了，是要等到这个事务结束以后才会执行的
+
+
+间隙锁的作用：
+1.防止幻读
+2.防止数据误删/改
+
+使用间隙锁的隐患:
+最大的隐患就是性能问题
+
+
+
+https://www.cnblogs.com/billmiao/p/9872161.html
+
+https://www.cnblogs.com/cjjjj/p/12828415.html

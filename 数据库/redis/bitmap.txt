@@ -1,0 +1,76 @@
+redis bitmap
+1 Byte = 8 Bits
+
+1 KB = 1024 Bytes
+
+1 MB = 1024 KB
+
+1 GB = 1024 MB
+
+计算机以二进制的方式处理数据
+
+应用场景:
+一般用于在线人数统计
+
+原理:
+Bitmap 的基本原理就是用一个 bit 来标记某个元素对应的 Value，而 Key 即是该元素。由于采用一个bit 来存储一个数据，因此可以大大的节省空间。
+只能标记为0 或者 1
+使用:
+
+如uid: 1、2、3、4、5
+
+命令如下
+setbit  user  1  1
+0
+setbit  user  2   1
+0
+成功返回0
+
+getbit user 1
+1
+getbit user 3
+0
+getbit 命令已设置的值返回1 未设置返回0
+
+
+BITCOUNT 就是统计字符串的二进制码中，有多少个'1'。
+
+统计设置为1的数量
+命令
+bitcount user
+2
+返回2
+
+
+其他例子：
+举个例子，如果今天是网站上线的第 100 天，而用户 peter 在今天阅览过网站，那么执行命令 SETBIT peter 100 1 ；
+如果明天 peter 也继续阅览网站，那么执行命令 SETBIT peter 101 1 ，以此类推。
+当要计算 peter 总共以来的上线次数时，就使用 BITCOUNT 命令：执行 BITCOUNT peter ，得出的结果就是 peter 上线的总天数。
+
+bitcount命令：
+
+字母转二进制(http://www.txttool.com/wenben_strbinary.asp)
+
+语法：bitcount key [start] [end]
+计算给定字符串中,被甚至为1的比特位的数量。
+默认情况下,给定的整个字符串都会被进行计数,可以通过start、end指定区间中指定计数操作
+start和end可以包含负值,以便从字符串末尾开始索引字节,其中-1是最后一个字节,以此类推
+不存在的键被视为空字符串,返回0
+返回值：
+被设置为1的位的数量。
+举例：
+set m "ab"   ab 二进制 01100001 01100010
+bitcount m 返回6
+bitcount m 0 0 也就是a 返回3
+bitcount m 1 1也就是b 返回3
+
+
+bitcount  m -2 -1 倒数第二位  -  倒数第一位之间(-1代表到时第一)
+
+原文链接：https://blog.csdn.net/qq_34206560/article/details/90705402
+
+
+链接：https://segmentfault.com/a/1190000008188655
+使用场景一：用户签到
+使用场景二：统计活跃用户
+使用场景三：用户在线状态

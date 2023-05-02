@@ -1,0 +1,8 @@
+brew list
+
+brew services list
+
+
+
+软件安装目录：
+/usr/local/Cellar

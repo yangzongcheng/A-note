@@ -1,0 +1,73 @@
+全局搜索（command + shift + F）
+
+搜索文件名（command + option + o）
+
+显示类中的方法 （command + 7）
+
+函数追踪 （command +鼠标点击）
+
+单行注释/取消（command + /）
+
+输入行号跳到某一行（command + l）
+
+列出打开的文件（command + e）
+
+删除当前行（command + x）
+
+复制当前行（command + d）
+
+跳到变量申明处（command + b）
+
+格式化代码（command + option + l）
+
+关闭当前窗口 （command + w）
+
+项目刷新 （command + option + y）
+
+多行注释（command + option + /）
+
+查找//@todo标签（command + 6）
+
+列出左侧文件（command + 1）
+
+切换大小写（command + shift + u）
+
+复制（command + c）
+
+粘贴（command + v）
+
+撤销（command + z）
+
+显示行号
+
+IDE settings->Editor->General->Appearance->Show Line Number
+
+换肤
+
+IDE settings->Editor->Colors & Fonts 下拉框选择即可。
+
+设置字体大小
+
+IDE settings->Editor->Colors & Fonts->font 设置即可。
+
+配置文件头默认注释
+
+IDE settings->Editor->File and Code Templates->PHP File Header。
+
+设置注释不顶格
+
+IDE settings->Editor->Code Style->PHP 去掉勾 Line comment at first column。
+
+去掉右上角游览器
+
+IDE settings->tools ->WebBrowsers 去掉选中即可。
+
+PHPStorm + CodeSniffer
+
+设置
+
+IDE settings->Languages & Frameworks->PHP->CodeSniffer-> 配置即可。
+
+选择编码规范
+
+IDE settings->Editor->Inspections->PHP->PHP Code Sniffer validation(打钩) ->Coding Standard 选择规范（PEAR）

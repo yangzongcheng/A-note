@@ -1,0 +1,22 @@
+
+创建内部网络
+docker  network create  --subnet=192.168.2.0/24  mynet(别名)
+
+
+
+docker run --name mysql5.7-test  -p 3308:3306  --net mynet --ip 192.168.2.2  -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7
+
+
+指定容器ip只能 通过内网 使用
+容一个网关下面容器间可以相互访问
+
+
+
+
+docker network inspect mynet  查看内部网络信息
+
+docker network ls
+
+
+docker inspect --format='{{.NetworkSettings.IPAddress}}' NAMES  查看容器ip
+
