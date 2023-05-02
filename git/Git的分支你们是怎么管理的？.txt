@@ -1,5 +1,0 @@
-创建多个分支：
-1、master
-2、dev 开发分支
-3、test 测试分支
-4、producter 先上生产分支

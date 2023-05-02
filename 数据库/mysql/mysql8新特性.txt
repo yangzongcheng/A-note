@@ -1,4 +1,0 @@
-1. 默认字符集由latin1变为utf8mb4
-
-2. MyISAM系统表全部换成InnoDB表
-

@@ -1,7 +1,0 @@
-gui dashboard
-
-安装
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.5/aio/deploy/recommended.yaml
-
-启动
-kubectl proxy

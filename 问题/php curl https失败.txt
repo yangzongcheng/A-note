@@ -1,3 +1,0 @@
-php --ri curl 查看是否能https
-
-重装curl

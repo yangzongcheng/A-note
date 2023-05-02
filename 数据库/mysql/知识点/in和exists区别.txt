@@ -1,9 +1,0 @@
-1、exists和in的区别和使用场景
-
-是的，其实上面的例子，in这货也能完成，如下面SQL语句
-
-SELECT * FROM `user`
-    WHERE id in (SELECT user_id FROM `order`)
-那么！in和exists到底有啥区别那，要什么时候用in，什么时候用exists那？
-“外层查询表小于子查询表，则用exists，外层查询表大于子查询表，则用in，如果外层和子查询表差不多，则爱用哪个用哪个。”
-

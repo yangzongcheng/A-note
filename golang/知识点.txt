@@ -1,9 +1,0 @@
-#直接运行
-go run main.go
-
-#正常打包
-go build main.go
-
-#打包指定文件名
-go build -o exec.exe main.go
-

@@ -1,8 +1,0 @@
-Swoole启动后Master主线程会负责监听服务器的socket，如果有新的连接accept，
-Master主线程会评估每个Reactor线程的连接数量，并将此连接分配给连接最少的Reactor线程。这样做的好处是：
-
-每个Reactor线程持有的连接数非常均衡，没有单个线程负载过高的问题。
-解决了惊群问题，尤其是拥有多个listen socket时，节约了线程唤醒和切换的开销。
-主线程接管了所有信号signal的处理，使Reactor线程运行中可以不被信号打断。
-主线程Master在accept新的连接后，会将这个连接分配给一个固定的Reactor线程，
-并由这个线程负责监听此socket，在socket可读时读取数据，并进行协议解析，最后将请求投递到Worker进程。

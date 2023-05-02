@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<mysql>
-    <!-- 为防止出现意外，请按照此标准顺序书写.其实也无所谓了 -->
-    <host>localhost</host>
-    <user>root</user>
-    <password>123456</password>
-    <db>test</db>
-    <port>3306</port>
-</mysql>

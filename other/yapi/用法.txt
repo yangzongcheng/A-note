@@ -1,7 +1,0 @@
-pm2 list
-
-pm2 stop all
-
-pm2 start all 
-
-pm2 info app
