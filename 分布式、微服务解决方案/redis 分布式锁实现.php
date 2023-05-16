@@ -1,7 +1,8 @@
 <?php
 
 //1、使用setnx() 设置锁
-
+$redis = new \Redis();
+$redis->connect('localhost', 6379);
 $expire = 10;//有效期10秒
 $key = 'lock';//key
 $value = time() + $expire;//锁的值 = Unix时间戳 + 锁的有效期
@@ -43,7 +44,8 @@ while($status)
 //但是，简单粗暴的用DEL命令删除锁再SETNX命令上锁也会出现问题。比如：
 //进程1获得锁后崩溃或删除锁失败，这时进程2检测到锁存在当已过期，用DEL命令删除锁并用SETNX命令设置锁，
 //进程3也检测到锁过期，也用DEL命令删除锁也用SETNX命令设置了锁，这时进程2和进程3同时获得了锁。问题大了
-//为了解决这个问题，这里用到了Redis的GETSET命令，GETSET命令在给锁设置新值的同时返回锁的旧值，这里利用了GETSET命令同时获取和赋值的特性，在此期间其他进程无法修改锁的值。
+//为了解决这个问题，这里用到了Redis的GETSET命令，GETSET命令在给锁设置新值的同时返回锁的旧值，
+//这里利用了GETSET命令同时获取和赋值的特性，在此期间其他进程无法修改锁的值。
 
 
 //例如：
@@ -91,7 +93,7 @@ if(empty($result))
          * 2、   1）判断锁的值（时间戳）是否小于当前时间    $redis->get()
          *      2）同时给锁设置新值成功    $redis->getset()
          */
-        if(!empty($lock) || ($redis->get($lockKey) < time() && $redis->getSet($lockKey, $lockValue) < time() ))
+        if(!empty($lock) || ($redis->get($lockKey) < time() && $redis->getSet($lockKey, $lockValue) < time()))
         {
             //给锁设置生存时间
             $redis->expire($lockKey, $lockExpire);
@@ -113,4 +115,6 @@ if(empty($result))
             sleep(2);//等待2秒后再尝试执行操作
         }
     }
+}else{
+    #崩溃的情况等锁过期
 }
