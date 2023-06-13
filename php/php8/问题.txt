@@ -41,4 +41,8 @@ EXTRA_LIBS 后 追加libssl.dylib 和 libcrypto.dylib 的路径，重新make就�
 
 
 swoole
-./configure --enable-openssl --with-openssl-dir=/usr/local/openssl --enable-http2 --with-php-config=/www/server/php/81/bin/php-config
+
+
+phpize
+./configure --enable-openssl  --enable-http2 --with-php-config=/www/server/php/81/bin/php-config
+make && make install
