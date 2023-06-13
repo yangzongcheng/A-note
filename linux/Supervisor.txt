@@ -1,0 +1,18 @@
+要在 Debian 上安装 Supervisor，请按照以下步骤进行操作：
+
+sudo apt update
+
+sudo apt install supervisor
+
+
+sudo vim /etc/supervisor/conf.d/myapp.conf
+
+
+
+sudo supervisorctl reread
+sudo supervisorctl update
+
+
+
+sudo supervisorctl stop myapp
+
